@@ -33,3 +33,21 @@ p {
     margin-bottom: 1rem;
   }
 }
+
+
+// Layout
+#main {
+  section {
+    
+    > .container > .row {
+      padding: 60px 0;
+    }
+
+    h2 {
+      font-size: 3.5rem;
+      font-weight: 300;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}

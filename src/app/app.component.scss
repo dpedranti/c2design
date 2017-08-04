@@ -1,0 +1,35 @@
+@import 'variables';
+@import '../assets/scss/mixins';
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  padding-top: 75px;
+  margin-bottom: 120px;
+}
+
+
+// Typography
+
+h1 {
+  font-style: italic;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+.jumbotron {
+  padding-left: 2rem;
+  @include border-radius(0);
+  border-left: 1px solid #fff;
+  font-size: 1.5rem;
+  font-weight: 300;
+
+  > *:last-child {
+    margin-bottom: 1rem;
+  }
+}

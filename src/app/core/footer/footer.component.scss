@@ -1,0 +1,31 @@
+@import 'variables';
+
+// Footer
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 150px;
+  background-color: $gray;
+  color: #fff;
+  font-size: 14px;
+
+  .footer-left,
+  .footer-right {
+    padding-top: 30px;
+  }
+
+  .footer-right {
+    text-align: right;
+  }
+}
+
+@media (max-width: 767px) {
+  #footer {
+    .footer-left,
+    .footer-right {
+      text-align: center;
+    }
+  }
+}

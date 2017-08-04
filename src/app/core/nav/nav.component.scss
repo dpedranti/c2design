@@ -1,0 +1,60 @@
+@import 'variables';
+@import '../assets/scss/mixins';
+
+// Navbar
+
+.navbar-inverse {
+    border-top: 6px solid $brand-primary;
+
+    #logo-c2design-studio {
+        width: 224px;
+        height: 40px;
+        padding: 0;
+        background: transparent url('../../../assets/images/logo-c2design-studio-rev.png') no-repeat top left;
+        background-size: 184px 40px;
+        text-indent: -9999px;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-inverse {
+        padding: 0 16px;
+
+        .navbar-nav {
+            .nav-item {
+                margin-top: -6px;
+
+                .nav-link {
+                    padding: 24px 16px;
+                    color: #fff;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                }
+
+                &:before {
+                    content: "";
+                    display: block;
+                    height: 6px;
+                    width: 0;
+                    opacity: 0;
+                    background-color: #fff;
+                }
+
+                &:hover,
+                &:focus {
+                    &:before {
+                        width: 100%;
+                        opacity: 1;
+                        background-color: #fff;
+                        @include transition(0.2s ease-in-out);
+                    }
+                }
+
+                &.router-link-active .nav-link {
+                    margin-top: -6px;
+                    border-top: 6px solid #fff;
+                }
+            }
+        }
+    }
+}

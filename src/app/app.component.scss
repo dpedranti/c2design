@@ -22,6 +22,43 @@ p {
   margin-bottom: 2rem;
 }
 
+.no-wrap {
+  white-space: nowrap;
+}
+
+
+// Layout
+
+#main {
+  section {
+    
+    > .container > .row {
+      padding: 60px 0;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+      font-size: 3.5rem;
+      font-weight: 300;
+      text-align: center;
+      text-transform: uppercase;
+
+      &.separator:after {
+        content: "";
+        display: block;
+        height: 8px;
+        width: 160px;
+        margin: 1.5rem auto 0 auto;
+        @include background-image(header-separator-white);
+        background-size: 160px 8px;
+      }
+    }
+  }
+}
+
+
+// Components
+
 .jumbotron {
   padding-left: 2rem;
   @include border-radius(0);
@@ -35,19 +72,11 @@ p {
 }
 
 
-// Layout
-#main {
-  section {
-    
-    > .container > .row {
-      padding: 60px 0;
-    }
+// Reponsive
 
-    h2 {
-      font-size: 3.5rem;
-      font-weight: 300;
-      text-align: center;
-      text-transform: uppercase;
-    }
+@media (max-width: 599px) {
+  .jumbotron {
+    padding: 0 1rem;
+    border-left: none;
   }
 }

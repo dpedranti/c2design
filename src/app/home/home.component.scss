@@ -33,6 +33,25 @@
 
 #who-we-are {
     min-height: 400px;
-    background-color: $brand-primary;
+    background: $brand-primary url('../../assets/images/bg-who-we-are.svg') no-repeat right bottom;
+    background-size: auto 90%;
     color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+// Responsive
+
+@media (max-width: 767px) {
+  #uvp {
+    > .container > .row {
+      min-height: 560px;
+    }
+  }
+
+  #who-we-are {
+    background: $brand-primary;
+  }
 }

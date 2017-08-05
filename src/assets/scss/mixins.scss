@@ -72,7 +72,7 @@
 
 
 // SVG background images with PNG and retina fallback
-$image-path: '../images' !default;
+$image-path: '../assets/images' !default;
 $bitmap-extension: 'png' !default;
 $retina-suffix: '2x';
 @mixin background-image($name, $svg:false){

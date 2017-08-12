@@ -32,13 +32,12 @@ p {
 #main {
   section {
     
-    > .container > .row {
+    > .container {
       padding: 60px 0;
     }
 
     h2 {
       margin-bottom: 2rem;
-      font-size: 3.5rem;
       font-weight: 300;
       text-align: center;
       text-transform: uppercase;
@@ -55,6 +54,17 @@ p {
     }
   }
 }
+
+
+// Icons
+.icon-circle {
+  display: block;
+  height: 110px;
+  width: 110px;
+  @include border-radius(50%);
+  border: 3px solid $gray-lighter;
+}
+
 
 
 // Components

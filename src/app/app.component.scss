@@ -1,6 +1,10 @@
 @import 'variables';
 @import '../assets/scss/mixins';
 
+$ionicons-font-path: '../../node_modules/ionicons-npm/fonts';
+@import '../../node_modules/ionicons-npm/scss/ionicons';
+
+
 html {
   position: relative;
   min-height: 100%;
@@ -33,11 +37,11 @@ p {
   section {
     
     > .container {
-      padding: 60px 0;
+      padding: 3.75rem 30px;
     }
 
     h2 {
-      margin-bottom: 2rem;
+      margin-bottom: 2.25rem;
       font-weight: 300;
       text-align: center;
       text-transform: uppercase;
@@ -77,6 +81,14 @@ p {
 
 // Icons
 
+.icon-inline {
+  display: inline-block;
+  margin: -2px 8px 0 0;
+  font-size: 26px;
+  line-height: 1;
+  vertical-align: middle;
+}
+
 .icon-circle {
   display: block;
   height: 110px;
@@ -87,6 +99,10 @@ p {
 
 
 // Buttons
+
+.btn {
+  @include box-shadow(1px 1px 7px 0 rgba($black, .23));
+}
 
 .btn-white {
   background-color: #fff;
@@ -116,9 +132,9 @@ p {
 
 // Reponsive
 
-@media (max-width: 599px) {
+@media (max-width: 575px) {
   .jumbotron {
-    padding: 0 1rem;
+    padding: 0;
     border-left: none;
   }
 }

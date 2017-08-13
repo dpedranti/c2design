@@ -18,7 +18,7 @@
         z-index: -1;
         height: 100%;
         width: 100%;
-        background-color: rgba($brand-primary, 0.5);
+        background-color: rgba($brand-primary, 0.55);
     }
 
     > .container > .row {
@@ -54,6 +54,48 @@
         width: 200px;
         margin: 0 auto 15px auto;
         border-width: 4px;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        &.icon-web:before {
+            @include background-image(icon-tablet-blue, true, '../../assets/images');
+        }
+
+        &.icon-online-marketing:before {
+            @include background-image(icon-monitor-usd-blue, true, '../../assets/images');
+        }
+
+        &.icon-digital-design:before {
+            @include background-image(icon-monitor-play-blue, true, '../../assets/images');
+        }
+    }
+
+    #btn-services {
+        margin-top: 1rem;
+    }
+}
+
+#get-in-touch {
+    background-color: $gray-dark;
+    color: #fff;
+
+    .contact-info {
+        .name {
+            margin-bottom: 5px;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+    }
+
+    a:not(.btn-white) {
+        color: #fff;
     }
 }
 
@@ -81,6 +123,14 @@
       .icon-circle {
           height: 150px;
           width: 150px;
+
+          &:before {
+              background-size: 60% 60%;
+          }
+
+          &.icon-digital-design:before {
+              background-size: 65% auto;
+          }
       }
   }
 }

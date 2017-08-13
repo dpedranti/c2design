@@ -8,7 +8,7 @@ html {
 
 body {
   padding-top: 75px;
-  margin-bottom: 120px;
+  margin-bottom: 150px;
 }
 
 
@@ -52,19 +52,12 @@ p {
         background-size: 160px 8px;
       }
     }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 }
-
-
-// Icons
-.icon-circle {
-  display: block;
-  height: 110px;
-  width: 110px;
-  @include border-radius(50%);
-  border: 3px solid $gray-lighter;
-}
-
 
 
 // Components
@@ -79,6 +72,45 @@ p {
   > *:last-child {
     margin-bottom: 1rem;
   }
+}
+
+
+// Icons
+
+.icon-circle {
+  display: block;
+  height: 110px;
+  width: 110px;
+  @include border-radius(50%);
+  border: 3px solid $gray-lighter;
+}
+
+
+// Buttons
+
+.btn-white {
+  background-color: #fff;
+  color: $gray-dark;
+
+  &:hover,
+  &:focus {
+      background-color: lighten($gray-light, 5%);
+      color: $gray-darker;
+  }
+}
+
+
+// Utilities
+
+.v-center {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.v-content {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 

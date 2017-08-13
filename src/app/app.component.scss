@@ -125,6 +125,11 @@ p {
 
 .btn {
   @include box-shadow(1px 1px 7px 0 rgba($black, .23));
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
 }
 
 .btn-white {

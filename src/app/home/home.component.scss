@@ -138,33 +138,31 @@
   #who-we-are {
     background: darken($brand-primary, 2%);
   }
+
+  #our-services {
+    h3 {
+        font-size: 2rem;
+    }
+    
+    .icon-circle {
+        height: 150px;
+        width: 150px;
+
+        &:before {
+            background-size: 60% 60%;
+        }
+
+        &.icon-digital-design:before {
+            background-size: 65% auto;
+        }
+    }
+}
 }
 
 @media (max-width: 767px) {
     #get-in-touch {
         .contact-info {
             margin-bottom: 3rem;
-        }
-    }
-}
-
-@media (min-width: 576px) and (max-width: 767px) {
-    #our-services {
-        h3 {
-            font-size: 2rem;
-        }
-        
-        .icon-circle {
-            height: 150px;
-            width: 150px;
-
-            &:before {
-                background-size: 60% 60%;
-            }
-
-            &.icon-digital-design:before {
-                background-size: 65% auto;
-            }
         }
     }
 }

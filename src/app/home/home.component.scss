@@ -94,7 +94,7 @@
         }
 
         .contact-title {
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
         }
     }
 
@@ -142,10 +142,8 @@
 
 @media (max-width: 767px) {
     #get-in-touch {
-        > .container > .row {
-            .row > div {
-                margin-bottom: 2rem;
-            }
+        .contact-info {
+            margin-bottom: 3rem;
         }
     }
 }

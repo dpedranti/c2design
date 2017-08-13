@@ -87,20 +87,46 @@
     color: #fff;
 
     .contact-info {
-        .name {
+        .contact-name {
             margin-bottom: 5px;
             font-size: 1.5rem;
             font-weight: 300;
+        }
+
+        .contact-title {
+            margin-bottom: 20px;
         }
     }
 
     a:not(.btn-white) {
         color: #fff;
     }
+
+    .icon-circle-solid {
+        background-color: #fff;
+        color: $gray-dark;
+        @include transition(all 0.2s ease-in-out);
+
+        &:hover,
+        &:focus {
+            background-color: lighten($gray-light, 5%);
+        }
+    }
 }
 
 
 // Responsive
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #get-in-touch {
+        .icon-ul {
+            li {
+                display: block;
+                margin: 0 0 15px 0;
+            }
+        }
+    }
+}
 
 @media (max-width: 767px) {
   #uvp {
@@ -114,32 +140,32 @@
   }
 }
 
-@media (min-width: 576px) and (max-width: 767px) {
-  #our-services {
-      h3 {
-          font-size: 2rem;
-      }
-      
-      .icon-circle {
-          height: 150px;
-          width: 150px;
-
-          &:before {
-              background-size: 60% 60%;
-          }
-
-          &.icon-digital-design:before {
-              background-size: 65% auto;
-          }
-      }
-  }
-}
-
 @media (max-width: 767px) {
     #get-in-touch {
         > .container > .row {
             .row > div {
                 margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    #our-services {
+        h3 {
+            font-size: 2rem;
+        }
+        
+        .icon-circle {
+            height: 150px;
+            width: 150px;
+
+            &:before {
+                background-size: 60% 60%;
+            }
+
+            &.icon-digital-design:before {
+                background-size: 65% auto;
             }
         }
     }

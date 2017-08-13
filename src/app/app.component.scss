@@ -81,6 +81,19 @@ p {
 
 // Icons
 
+.icon-ul {
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+
+    display: inline-block;
+  }
+}
+
 .icon-inline {
   display: inline-block;
   margin: -2px 8px 0 0;
@@ -95,6 +108,16 @@ p {
   width: 110px;
   @include border-radius(50%);
   border: 3px solid $gray-lighter;
+}
+
+.icon-circle-solid {
+  display: block;
+  height: 50px;
+  width: 50px;
+  @include border-radius(50%);
+  background-color: $gray-lighter;
+  font-size: 34px;
+  text-align: center;
 }
 
 

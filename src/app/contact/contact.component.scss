@@ -1,0 +1,32 @@
+@import 'variables';
+@import '../../assets/scss/mixins';
+
+//
+// Contact Page
+// --------------------------------------------------
+
+#contact {
+    position: relative;
+    z-index: 0;
+    background: transparent url('../../assets/images/fea-c2design-studio-contact.jpg') no-repeat left center;
+    @include background-size(cover);
+    color: #fff;
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($gray-dark, 0.5);
+    }
+
+    > .container > .row {
+        min-height: 300px;
+
+        > div {
+            @include display-flex();
+            @include align-items(center);
+        }
+    }
+}

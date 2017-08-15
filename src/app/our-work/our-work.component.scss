@@ -1,2 +1,40 @@
 @import 'variables';
+@import '../../assets/scss/mixins';
 
+//
+// Our Work Page
+// --------------------------------------------------
+
+#our-work {
+    position: relative;
+    z-index: 0;
+    background: transparent url('../../assets/images/fea-c2design-studio-work.jpg') no-repeat left center;
+    @include background-size(cover);
+    color: #fff;
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($brand-primary, 0.5);
+    }
+
+    > .container > .row {
+        min-height: 300px;
+
+        > div {
+            @include display-flex();
+            @include align-items(center);
+        }
+    }
+}
+
+#user-centered-design {
+  background-color: $green;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+}

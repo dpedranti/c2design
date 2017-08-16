@@ -689,22 +689,22 @@ $jumbotron-bg:                   transparent !default;
 //
 // Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             #3c763d !default;
-$state-success-bg:               #dff0d8 !default;
-$state-success-border:           darken($state-success-bg, 5%) !default;
+$state-success-text:             $gray-dark !default;
+$state-success-bg:               lighten($green, 38%) !default;
+$state-success-border:           darken($state-success-bg, 10%) !default;
 
-$state-info-text:                #31708f !default;
-$state-info-bg:                  #d9edf7 !default;
-$state-info-border:              darken($state-info-bg, 7%) !default;
+$state-info-text:                $gray-dark !default;
+$state-info-bg:                  lighten($blue, 55%) !default;
+$state-info-border:              darken($state-info-bg, 10%) !default;
 
-$state-warning-text:             #8a6d3b !default;
-$state-warning-bg:               #fcf8e3 !default;
+$state-warning-text:             $gray-dark !default;
+$state-warning-bg:               lighten($yellow, 25%) !default;
 $mark-bg:                        $state-warning-bg !default;
-$state-warning-border:           darken($state-warning-bg, 5%) !default;
+$state-warning-border:           darken($state-warning-bg, 10%) !default;
 
-$state-danger-text:              #a94442 !default;
-$state-danger-bg:                #f2dede !default;
-$state-danger-border:            darken($state-danger-bg, 5%) !default;
+$state-danger-text:              $gray-dark !default;
+$state-danger-bg:                lighten($red, 43%) !default;
+$state-danger-border:            darken($state-danger-bg, 10%) !default;
 
 
 // Cards
@@ -826,7 +826,7 @@ $modal-transition:            transform .3s ease-out !default;
 $alert-padding-x:             1.25rem !default;
 $alert-padding-y:             .75rem !default;
 $alert-margin-bottom:         $spacer-y !default;
-$alert-border-radius:         $border-radius !default;
+$alert-border-radius:         0 !default;
 $alert-link-font-weight:      $font-weight-bold !default;
 $alert-border-width:          $border-width !default;
 

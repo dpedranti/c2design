@@ -144,10 +144,60 @@ p {
 }
 
 
+// Icons
+.alert:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
 // Alerts
 
 .alert {
+  position: relative;
+  min-height: 66px;
   border: none;
+  padding: 20px 15px 15px 66px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    display: block;
+    height: 40px;
+    width: 40px;
+    font-size: 44px;
+  }
+
+  &.alert-success:before {
+    content: "\f3fe";
+    color: darken($green, 5%);
+  }
+
+  &.alert-info:before {
+    content: "\f44c";
+    color: $blue;
+  }
+
+  &.alert-warning:before {
+    content: "\f35b";
+    color: darken($yellow, 10%);
+  }
+
+  &.alert-danger:before {
+    content: "\f100";
+    color: $red;
+  }
 }
 
 

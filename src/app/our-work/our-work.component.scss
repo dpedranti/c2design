@@ -38,3 +38,43 @@
   font-weight: 300;
   text-align: center;
 }
+
+#work-samples {
+    .alert-info {
+        margin-bottom: 3rem;
+    }
+    
+    .heading-icon {
+        position: relative;
+        padding-left: 120px;
+        margin-bottom: 3rem;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: -13px;
+            left: 0;
+            display: block;
+            height: 75px;
+            width: 90px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+        }
+
+        &.heading-web:before {
+            @include background-image(icon-tablet-green, true, '../../assets/images');
+            background-size: auto 75px;
+        }
+
+        &.heading-online-marketing:before {
+            @include background-image(icon-monitor-usd-green, true, '../../assets/images');
+            background-size: 75px auto;
+        }
+
+        &.heading-digital-design:before {
+            @include background-image(icon-monitor-play-green, true, '../../assets/images');
+            background-size: 90px auto;
+        }
+    }
+}

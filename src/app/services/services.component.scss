@@ -48,3 +48,35 @@
     }
   }
 }
+
+#service-offerings {
+    .icon-link {
+        color: $orange;
+    }
+
+    .icon-circle {
+        &:before {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        &.icon-web:before {
+            @include background-image(icon-tablet-orange, true, '../../assets/images');
+            background-size: auto 60px;
+        }
+
+        &.icon-online-marketing:before {
+            @include background-image(icon-monitor-usd-orange, true, '../../assets/images');
+            background-size: 60px auto;
+        }
+
+        &.icon-digital-design:before {
+            @include background-image(icon-monitor-play-orange, true, '../../assets/images');
+            background-size: 70px auto;
+        }
+    }
+}

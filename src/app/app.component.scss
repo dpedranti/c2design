@@ -112,6 +112,7 @@ p {
   width: 110px;
   @include border-radius(50%);
   border: 3px solid $gray-lighter;
+  text-align: center;
 }
 
 .icon-circle-solid {
@@ -124,11 +125,59 @@ p {
   text-align: center;
 }
 
+.icon-link {
+  color: $gray-dark;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    .icon-circle {
+      background-color: $gray-lighter;
+      @include transition(background-color .2s linear);
+    
+      &.anchor-down:before {
+          content: "\f35d" !important;
+          background-image: none !important;
+          @include icon-font();
+          font-size: 48px;
+          line-height: 110px;
+          text-align: center;
+      }
+    }
+  }
+
+  .icon-circle {
+    margin-bottom: 5px;
+  }
+}
+
+.icon-menu-horizontal {
+  @include display-flex();
+  @include justify-content(center);
+  padding: 0;
+  margin: 0 -30px;
+  list-style: none;
+
+  li {
+    margin: 0 30px;
+    font-size: 21px;
+    font-style: italic;
+    text-align: center;
+
+    .icon-circle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
 
 // Buttons
 
 .btn {
   @include box-shadow(1px 1px 7px 0 rgba($black, .23));
+  @include transition(background-color .2s ease-in-out);
 
   &:active {
     position: relative;
@@ -148,23 +197,6 @@ p {
 }
 
 
-// Icons
-
-.alert:before {
-  display: inline-block;
-  font-family: "Ionicons";
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  text-rendering: auto;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
 // Alerts
 
 .alert {
@@ -181,6 +213,7 @@ p {
     display: block;
     height: 40px;
     width: 40px;
+    @include icon-font();
     font-size: 44px;
   }
 

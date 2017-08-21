@@ -50,14 +50,20 @@ p {
       text-align: center;
       text-transform: uppercase;
 
-      &.separator:after {
-        content: "";
-        display: block;
-        height: 8px;
-        width: 160px;
-        margin: 1.5rem auto 0 auto;
-        @include background-image(header-separator-white);
-        background-size: 160px 8px;
+      &.separator {
+        &:after {
+          content: "";
+          display: block;
+          height: 8px;
+          width: 160px;
+          margin: 1.5rem auto 0 auto;
+          @include background-image(header-separator);
+          background-size: 160px 8px;
+        }
+
+        &.white:after {
+          @include background-image(header-separator-white);
+        }
       }
     }
 
@@ -156,7 +162,7 @@ p {
   @include display-flex();
   @include justify-content(center);
   padding: 0;
-  margin: 0 -30px;
+  margin: 0 -30px 3rem -30px;
   list-style: none;
 
   li {
@@ -250,6 +256,62 @@ p {
 .v-content {
   display: table-cell;
   vertical-align: middle;
+}
+
+
+// Accordion
+
+.accordion {
+  .card {
+    border: none;
+  
+    .card-header {
+      position: relative;
+      padding: 0;
+      background-color: $gray-dark;
+      border-bottom: none;
+      color: #fff;
+      font-size: 24px;
+      font-style: italic;
+  
+      &:not(:first-child) {
+        margin-top: 2rem;
+      }
+  
+      > a {
+        display: block;
+        padding: 0.75rem 3.5rem 0.75rem 1.25rem;
+        color: #fff;
+        @include transition(background-color .2s ease-in-out);
+
+        &:after {
+          content: "\f126";
+          position: absolute;
+          top: 0;
+          right: 1.25rem;
+          height: 100%;
+          width: 30px;
+          padding-top: 0.875rem;
+          @include icon-font();
+          font-size: 30px;
+          text-align: center;
+        }
+  
+        &:hover,
+        &:focus {
+          background-color: $gray-darker;
+          text-decoration: none;
+        }
+      }
+
+      &.active > a {
+        &:after {
+          content: "\f123";
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
 }
 
 

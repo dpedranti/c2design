@@ -14,7 +14,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
-          <h2 class="separator">Interactive &amp; Digital Design</h2>
+          <h2 class="separator white">Interactive &amp; Digital Design</h2>
           <p>C2 Design Studio’s senior-level experts are ready to serve. We have over 20 years' experience 
             in design, user experience analysis, user testing, and full-stack development for both web and 
             mobile applications.</p>
@@ -29,16 +29,51 @@
           <div class="col-sm-12">
             <h2 class="separator">Service Offerings</h2>
             <ul class="icon-menu-horizontal">
-              <li><a class="icon-link" href="#web"><i class="icon-circle anchor-down icon-web"></i>
+              <li><a class="icon-link" href="#web-mobile"><i class="icon-circle anchor-down icon-web"></i>
                 web / mobile</a>
               </li>
-              <li><a class="icon-link" href="#web"><i class="icon-circle anchor-down icon-online-marketing"></i>
+              <li><a class="icon-link" href="#online-marketing"><i class="icon-circle anchor-down icon-online-marketing"></i>
                 online marketing</a>
               </li>
-              <li><a class="icon-link" href="#web"><i class="icon-circle anchor-down icon-digital-design"></i>
+              <li><a class="icon-link" href="#all-digital"><i class="icon-circle anchor-down icon-digital-design"></i>
                 all things digital</a>
               </li>
             </ul>
+            <ngb-accordion
+              #acc="ngbAccordion"
+              activeIds={{openAccordions}}
+              class="accordion">
+              <ngb-panel id="web-mobile" title="web / mobile">
+                <ng-template ngbPanelContent>
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+                  aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                  sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                  craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                  occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                  labore sustainable VHS.
+                </ng-template>
+              </ngb-panel>
+              <ngb-panel id="online-marketing" title="online marketing">
+                <ng-template ngbPanelContent>
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+                  aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                  sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                  craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                  occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                  labore sustainable VHS.
+                </ng-template>
+              </ngb-panel>
+              <ngb-panel id="all-digital" title="all things digital">
+                <ng-template ngbPanelContent>
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+                  aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                  sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                  craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                  occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                  labore sustainable VHS.
+                </ng-template>
+              </ngb-panel>
+            </ngb-accordion>
           </div>
         </div>
       </div>

@@ -29,4 +29,8 @@
             @include align-items(center);
         }
     }
+
+    .jumbotron.icon-page:before {
+        background-position: 0 -330px;
+    }
 }

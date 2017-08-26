@@ -77,11 +77,29 @@ p {
 // Components
 
 .jumbotron {
+  position: relative;
   padding-left: 2rem;
+  
   @include border-radius(0);
   border-left: 1px solid #fff;
   font-size: 1.5rem;
   font-weight: 300;
+  
+  &.icon-page {
+    margin-left: 130px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -130px;
+      height: 110px;
+      width: 120px;
+      @include background-image(sprite-icon-page);
+      background-repeat: no-repeat;
+      background-size: 120px auto;
+    }
+  }
 
   > *:last-child {
     margin-bottom: 1rem;
@@ -337,5 +355,13 @@ p {
   .jumbotron {
     padding: 0;
     border-left: none;
+
+    &.icon-page {
+      margin-left: 0;
+
+      &:before {
+        content: none;
+      }
+    }
   }
 }

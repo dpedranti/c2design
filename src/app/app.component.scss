@@ -110,12 +110,19 @@ p {
 // Icons
 
 .icon-ul {
+  margin-left: -2px;
   padding-left: 0;
   list-style: none;
 
   li {
     &:not(:first-child) {
-      margin-left: 15px;
+      margin-top: 0.75rem;
+    }
+  }
+
+  &.icon-ul-inline li {
+    &:not(:first-child) {
+      margin-left: 1rem;
     }
 
     display: inline-block;
@@ -147,6 +154,7 @@ p {
   background-color: $gray-lighter;
   font-size: 34px;
   text-align: center;
+  @include transition(all 0.2s ease-in-out);
 }
 
 .icon-link {

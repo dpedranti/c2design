@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { AgmCoreModule } from '@agm/core';
 
 import { ContactRoutingModule, routedComponents } from './contact-routing.module';
 
 @NgModule({
-  imports: [ContactRoutingModule],
+  imports: [ContactRoutingModule, AgmCoreModule],
   declarations: [routedComponents]
 })
 export class ContactModule { }

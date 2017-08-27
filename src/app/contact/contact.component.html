@@ -39,3 +39,18 @@
     </div>
   </div>
 </section>
+<section id="our-designers">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <p>Our interactive designers and developers are available remote or can travel to your location. 
+          Please contact us for details.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="location-map">
+  <agm-map [latitude]="lat" [longitude]="lng" [styles]="styles" [zoom]="zoom">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+</section>

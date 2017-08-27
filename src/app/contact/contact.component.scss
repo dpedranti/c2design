@@ -34,3 +34,43 @@
         background-position: 0 -330px;
     }
 }
+
+#c2-design-studio {
+    .icon-circle-solid {
+        background-color: $gray-warm-dark;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            background-color: lighten($gray-warm-dark, 30%);
+        }
+    }
+}
+
+#our-designers {
+    background-color: $gray-warm-dark;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+
+    > .container {
+        padding: 5rem 30px;
+    }
+  
+    a {
+        color: #fff;
+        text-decoration: underline;
+    
+        &:hover,
+        &:focus {
+            color: $gray-lighter;
+        }
+    }
+}
+
+#location-map {
+    agm-map {
+        height: 300px;
+    }
+}

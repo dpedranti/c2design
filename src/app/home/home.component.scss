@@ -104,7 +104,6 @@
     .icon-circle-solid {
         background-color: #fff;
         color: $gray-dark;
-        @include transition(all 0.2s ease-in-out);
 
         &:hover,
         &:focus {

@@ -1,0 +1,138 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <p class="small">Fields marked with an asterisk (<span class="text-red">*</span>) are required.</p>
+    <form (ngSubmit)="onSubmit()" #appContactForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name <span class="text-red">*</span></label>
+        <input type="text" class="form-control" id="name"
+          required
+          [(ngModel)]="model.name" name="name"
+          #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+          class="alert alert-danger">
+          Name is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email <span class="text-red">*</span></label>
+        <input type="email" class="form-control" id="email"
+          required
+          [(ngModel)]="model.email" name="email"
+          #email="ngModel">
+        <div [hidden]="email.valid || email.pristine"
+          class="alert alert-danger">
+          Email is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="company">Company/Organization</label>
+        <input type="text" class="form-control" id="company"
+          [(ngModel)]="model.company" name="company">
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address"
+          [(ngModel)]="model.address" name="address">
+      </div>
+
+      <div class="form-group">
+        <label for="city">City <span class="text-red">*</span></label>
+        <input type="text" class="form-control" id="city"
+          required
+          [(ngModel)]="model.city" name="city"
+          #city="ngModel">
+        <div [hidden]="city.valid || city.pristine"
+          class="alert alert-danger">
+          City is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="state">State/Province <span class="text-red">*</span></label>
+        <select class="form-control" id="state"
+          required
+          [(ngModel)]="model.state" name="state"
+          #state="ngModel">
+          <option *ngFor="let state of states" [value]="state">{{state}}</option>
+        </select>
+        <div [hidden]="state.valid || state.pristine" class="alert alert-danger">
+          State/Province is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="zip">Zip/Postal Code</label>
+        <input type="text" class="form-control" id="zip"
+          [(ngModel)]="model.zip" name="zip">
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country <span class="text-red">*</span></label>
+        <select class="form-control" id="country"
+          required
+          [(ngModel)]="model.country" name="country"
+          #country="ngModel">
+          <option *ngFor="let country of countries" [value]="country">{{country}}</option>
+        </select>
+        <div [hidden]="country.valid || country.pristine" class="alert alert-danger">
+          Country is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Comments/Questions</label>
+        <textarea class="form-control" id="comments" rows="5"
+          [(ngModel)]="model.comments" name="comments"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-success btn-lg" [disabled]="!appContactForm.form.valid">Submit</button>
+      <button type="button" class="btn btn-default btn-lg" (click)="appContactForm.reset()">Reset</button>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted">
+    <h3>Thank You!</h3>
+    <p>We have received your form submission and will be in touch soon.</p>
+    <div class="row">
+      <div class="col-sm-6">Name:</div>
+      <div class="col-sm-6">{{ model.name }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">Company/Organization:</div>
+      <div class="col-sm-6">{{ model.company }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">Email:</div>
+      <div class="col-sm-6">{{ model.email }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">Address:</div>
+      <div class="col-sm-6">{{ model.address }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">City:</div>
+      <div class="col-sm-6">{{ model.city }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">State/Province:</div>
+      <div class="col-sm-6">{{ model.state }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">Zip/Postal Code:</div>
+      <div class="col-sm-6">{{ model.zip }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">Country:</div>
+      <div class="col-sm-6">{{ model.country }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">Comments/Questions:</div>
+      <div class="col-sm-6">{{ model.comments }}</div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+  </div>
+</div>

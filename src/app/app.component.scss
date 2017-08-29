@@ -233,6 +233,27 @@ p {
 }
 
 
+// Forms
+
+label {
+  margin-bottom: 0.125rem;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-control-lg {
+  font-size: 1.125rem;
+}
+
+.btn-row {
+  margin-top: 1rem;
+
+  .btn:not(:first-child) {
+    margin-left: 1rem;
+  }
+}
+
+
 // Alerts
 
 .alert {

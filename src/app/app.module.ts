@@ -4,25 +4,25 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeModule } from './home/home.module';
+import { AppRoutingModule, routedComponents } from './app-routing.module';
 
-/* Feature Modules */
 import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    routedComponents
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CoreModule,
     NgbModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBF1inD8C1JSEbDnj-GgWbBlwkgHCeOlCg'
-    })
+    }),
+    HomeModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

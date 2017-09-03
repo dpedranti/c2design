@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactFormModel } from './contact-form.model';
+import { ContactModel } from '../../models/contact.model';
 
 @Component({
   selector: 'app-contact-form',
@@ -9,7 +9,7 @@ import { ContactFormModel } from './contact-form.model';
 export class ContactFormComponent implements OnInit {
   states = ['', 'CA'];
   countries = ['', 'United States']
-  model = new ContactFormModel(
+  model = new ContactModel(
     'Derrick Pedranti',
     'derrick@c2designstudio.com',
     'Irvine',

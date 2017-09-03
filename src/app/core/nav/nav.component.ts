@@ -10,6 +10,7 @@ class MenuItem {
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  isNavbarCollapsed = true;
   siteTitle = 'C2 Design Studio';
 
   menuItems: MenuItem[];

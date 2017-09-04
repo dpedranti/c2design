@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  iconUrl = '../../assets/images/icon-map-marker.svg';
   lat = 33.6864427;
   lng = -117.9134737;
   zoom = 10;

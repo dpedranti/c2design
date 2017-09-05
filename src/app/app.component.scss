@@ -4,6 +4,24 @@
 $ionicons-font-path: '../../node_modules/ionicons-npm/fonts';
 @import '../../node_modules/ionicons-npm/scss/ionicons';
 
+//
+// Application-wide styles
+// --------------------------------------------------
+
+// Table of Contents
+//
+
+// Typography
+// Layout
+// Components
+// Icons
+// Buttons
+// Forms
+// Alerts
+// Utilities
+// Accordion
+// Responsive
+
 
 html {
   position: relative;
@@ -362,7 +380,7 @@ label {
       }
     }
 
-    .card-block {
+    .card-body {
       h3 {
         margin-top: 3rem;
         font-size: 1.5rem;

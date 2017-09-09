@@ -7,11 +7,11 @@
 
 $white:  #fff !default;
 $black:  #000 !default;
+$blue:   #007eb7 !default;
 $red:    #cd2026 !default;
 $orange: #da4c29 !default;
 $yellow: #f9c642 !default;
 $green:  #67ad44 !default;
-$blue:   #007eb7 !default;
 $teal:   #089c94 !default;
 
 $gray-darker:               #212121 !default;
@@ -22,7 +22,12 @@ $gray-lighter:              #e5e5e5 !default;
 $gray-lightest:             #f1f1f1 !default;
 $gray-warm-dark:            #494440 !default;
 
-$brand-inverse:             $gray-darker !default;
+$gray-800: $gray-darker !default;
+
+
+// Options
+
+$enable-rounded:            false !default;
 
 
 // Spacing
@@ -33,13 +38,12 @@ $spacer:   1rem !default;
 // Fonts
 
 $font-family-sans-serif: "Lato", Roboto, Arial, sans-serif !default;
-$font-family-base:       $font-family-sans-serif !default;
 
-$font-size-h1: 3rem !default;
-$font-size-h2: 3.5rem !default;
-$font-size-h3: 2.5rem !default;
+$h1-font-size: 3rem !default;
+$h2-font-size: 3.5rem !default;
+$h3-font-size: 2.5rem !default;
 
-$headings-margin-bottom: ($spacer) !default;
+$headings-margin-bottom: $spacer !default;
 $headings-font-weight:   400 !default;
 
 
@@ -47,36 +51,24 @@ $headings-font-weight:   400 !default;
 
 $btn-box-shadow:                 1px 1px 7px 0 rgba($black,.23) !default;
 
-$btn-primary-bg:                 $gray-dark !default;
-
 
 // Forms
 
 $input-border-color:             lighten($gray-light, 10%) !default;
 
-$input-border-radius:            0 !default;
-$input-border-radius-lg:         0 !default;
-$input-border-radius-sm:         0 !default;
-
-$input-padding-x-lg:             .75rem !default;
-
 $form-group-margin-bottom:       2rem !default;
-
-$custom-select-border-radius: 0 !default;
 
 
 // Navbar
 
 $navbar-padding-y:                  1rem !default;
 
-$navbar-toggler-border-radius:       0 !default;
-
-$navbar-inverse-toggler-border:        rgba($white,.2) !default;
+$navbar-dark-toggler-border-color:  rgba($white,.2) !default;
 
 
 // Navs
 
-$nav-link-padding:              1.5em !default;
+$nav-link-padding-x:              1.5em !default;
 
 
 // Jumbotron
@@ -85,34 +77,10 @@ $jumbotron-padding:              0 !default;
 $jumbotron-bg:                   transparent !default;
 
 
-// Form states and alerts
-
-$state-success-text:             $gray-dark !default;
-$state-success-bg:               lighten($green, 38%) !default;
-$state-success-border:           darken($state-success-bg, 10%) !default;
-
-$state-info-text:                $gray-dark !default;
-$state-info-bg:                  lighten($blue, 55%) !default;
-$state-info-border:              darken($state-info-bg, 10%) !default;
-
-$state-warning-text:             $gray-dark !default;
-$state-warning-bg:               lighten($yellow, 25%) !default;
-$state-warning-border:           darken($state-warning-bg, 10%) !default;
-
-$state-danger-text:              $gray-dark !default;
-$state-danger-bg:                lighten($red, 43%) !default;
-$state-danger-border:            darken($state-danger-bg, 10%) !default;
-
-
-// Cards
-
-$card-border-radius:       0 !default;
-
-
 // Alerts
 
 $alert-margin-bottom:         2rem !default;
-$alert-border-radius:         0 !default;
 
+
+@import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';
-

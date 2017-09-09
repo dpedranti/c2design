@@ -18,7 +18,7 @@
         z-index: -1;
         height: 100%;
         width: 100%;
-        background-color: rgba($brand-primary, 0.5);
+        background-color: rgba(theme-color("primary"), 0.5);
     }
 
     > .container > .row {

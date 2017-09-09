@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactModel } from '../../models/contact.model';
+import states from 'datasets-us-states-names';
 
 @Component({
   selector: 'app-contact-form',
@@ -7,7 +8,7 @@ import { ContactModel } from '../../models/contact.model';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent implements OnInit {
-  states = ['', 'CA'];
+  states = states;
   countries = ['', 'United States']
   model = new ContactModel(
     'Derrick Pedranti',

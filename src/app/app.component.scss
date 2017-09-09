@@ -229,12 +229,22 @@ p {
 // Buttons
 
 .btn {
-  @include box-shadow(1px 1px 7px 0 rgba($black, .23));
+  border: none;
+  @include border-radius(.3rem);
   @include transition(background-color .2s ease-in-out);
 
   &:active {
     position: relative;
     top: 1px;
+  }
+}
+
+.btn-primary {
+  background-color: $gray-dark;
+
+  &:hover,
+  &:focus {
+      background-color: darken($gray-dark, 10%);
   }
 }
 
@@ -278,6 +288,7 @@ label {
   min-height: 66px;
   border: none;
   padding: 20px 15px 15px 66px;
+  color: $gray-dark;
 
   &:before {
     content: "";
@@ -291,24 +302,44 @@ label {
     font-size: 44px;
   }
 
-  &.alert-success:before {
-    content: "\f3fe";
-    color: darken($green, 5%);
+  &.alert-success {
+    background-color: lighten($green, 38%);
+    border-color: darken($green, 10%);
+
+    &:before {
+      content: "\f3fe";
+      color: darken($green, 5%);
+    }
   }
 
-  &.alert-info:before {
-    content: "\f44c";
-    color: $blue;
+  &.alert-info {
+    background-color: lighten($blue, 55%);
+    border-color: darken($blue, 10%);
+
+    &:before {
+      content: "\f44c";
+      color: $blue;
+    }
   }
 
-  &.alert-warning:before {
-    content: "\f35b";
-    color: darken($yellow, 10%);
+  &.alert-warning {
+    background-color: lighten($yellow, 25%);
+    border-color: darken($yellow, 10%);
+
+    &:before {
+      content: "\f35b";
+      color: darken($yellow, 10%);
+    }
   }
 
-  &.alert-danger:before {
-    content: "\f100";
-    color: $red;
+  &.alert-danger {
+    background-color: lighten($red, 43%);
+    border-color: darken($red, 10%);
+
+    &:before {
+      content: "\f100";
+      color: $red;
+    }
   }
 }
 

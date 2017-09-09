@@ -18,7 +18,7 @@
         z-index: -1;
         height: 100%;
         width: 100%;
-        background-color: rgba($brand-primary, 0.6);
+        background-color: rgba(theme-color("primary"), 0.6);
     }
 
     > .container > .row {
@@ -33,7 +33,7 @@
 
 #who-we-are {
     min-height: 400px;
-    background: darken($brand-primary, 2%) url('../../assets/images/bg-who-we-are.svg') no-repeat right bottom;
+    background: darken(theme-color("primary"), 2%) url('../../assets/images/bg-who-we-are.svg') no-repeat right bottom;
     background-size: auto 90%;
     color: #fff;
     font-size: 1.5rem;
@@ -134,7 +134,7 @@
   }
 
   #who-we-are {
-    background: darken($brand-primary, 2%);
+    background: darken(theme-color("primary"), 2%);
   }
 
   #our-services {

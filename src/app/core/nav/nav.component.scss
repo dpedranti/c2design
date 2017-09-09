@@ -3,7 +3,7 @@
 
 // Navbar
 
-.navbar-inverse {
+.navbar-dark {
     #logo-c2design-studio {
         width: 224px;
         height: 40px;
@@ -15,8 +15,8 @@
 }
 
 @media (min-width: 768px) {
-    .navbar-inverse {
-        border-top: 6px solid $brand-primary;
+    .navbar-dark {
+        border-top: 6px solid theme-color("primary");
 
         padding: 0 1rem;
 
@@ -60,7 +60,7 @@
 }
 
 @media (max-width: 767px) {
-    .navbar-inverse {
+    .navbar-dark {
         .navbar-collapse {
             .navbar-nav {
                 padding-top: 1rem;

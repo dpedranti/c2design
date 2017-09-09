@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
 import { SharedModule } from '../shared/shared.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ContactRoutingModule, routedComponents } from './contact-routing.module';
 import { ContactFormComponent } from './contact-form/contact-form.component';
@@ -9,7 +10,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
   imports: [
     ContactRoutingModule,
     SharedModule,
-    AgmCoreModule
+    AgmCoreModule,
+    NgbModule
   ],
   declarations: [routedComponents, ContactFormComponent]
 })

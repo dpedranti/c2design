@@ -6,71 +6,73 @@
 // --------------------------------------------------
 
 #contact {
-    position: relative;
-    z-index: 0;
-    background: transparent url('../../assets/images/fea-c2design-studio-contact.jpg') no-repeat left center;
-    @include background-size(cover);
-    color: #fff;
+  position: relative;
+  z-index: 0;
+  background: transparent
+    url('../../assets/images/fea-c2design-studio-contact.jpg') no-repeat left
+    center;
+  @include background-size(cover);
+  color: #fff;
 
-    &:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        height: 100%;
-        width: 100%;
-        background-color: rgba($gray-dark, 0.5);
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($gray-dark, 0.5);
+  }
+
+  > .container > .row {
+    min-height: 300px;
+
+    > div {
+      @include display-flex();
+      @include align-items(center);
     }
+  }
 
-    > .container > .row {
-        min-height: 300px;
-
-        > div {
-            @include display-flex();
-            @include align-items(center);
-        }
-    }
-
-    .jumbotron.icon-page:before {
-        background-position: 0 -330px;
-    }
+  .jumbotron.icon-page:before {
+    background-position: 0 -330px;
+  }
 }
 
 #c2-design-studio {
-    .icon-circle-solid {
-        background-color: $gray-warm-dark;
-        color: #fff;
+  .icon-circle-solid {
+    background-color: $gray-warm-dark;
+    color: #fff;
 
-        &:hover,
-        &:focus {
-            background-color: lighten($gray-warm-dark, 30%);
-        }
+    &:hover,
+    &:focus {
+      background-color: lighten($gray-warm-dark, 30%);
     }
+  }
 }
 
 #our-designers {
-    background-color: $gray-warm-dark;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: 300;
-    text-align: center;
+  background-color: $gray-warm-dark;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
 
-    > .container {
-        padding: 5rem 30px;
+  > .container {
+    padding: 5rem 30px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $gray-lighter;
     }
-  
-    a {
-        color: #fff;
-        text-decoration: underline;
-    
-        &:hover,
-        &:focus {
-            color: $gray-lighter;
-        }
-    }
+  }
 }
 
 #location-map {
-    agm-map {
-        height: 300px;
-    }
+  agm-map {
+    height: 300px;
+  }
 }

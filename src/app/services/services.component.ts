@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./services.component.scss']
 })
 export class ServicesComponent implements OnInit {
-  openAccordions = ['web-mobile', 'online-marketing', 'all-digital'];
+  openAccordions = [
+    'web-mobile',
+    'online-marketing',
+    'all-digital',
+    'web-maintenance'
+  ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

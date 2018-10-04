@@ -6,33 +6,35 @@
 // --------------------------------------------------
 
 #services {
-    position: relative;
-    z-index: 0;
-    background: transparent url('../../assets/images/fea-c2design-studio-services.jpg') no-repeat left center;
-    @include background-size(cover);
-    color: #fff;
+  position: relative;
+  z-index: 0;
+  background: transparent
+    url('../../assets/images/fea-c2design-studio-services.jpg') no-repeat left
+    center;
+  @include background-size(cover);
+  color: #fff;
 
-    &:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        height: 100%;
-        width: 100%;
-        background-color: rgba($gray-dark, 0.45);
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($gray-dark, 0.45);
+  }
+
+  > .container > .row {
+    min-height: 300px;
+
+    > div {
+      @include display-flex();
+      @include align-items(center);
     }
+  }
 
-    > .container > .row {
-        min-height: 300px;
-
-        > div {
-            @include display-flex();
-            @include align-items(center);
-        }
-    }
-
-    .jumbotron.icon-page:before {
-        background-position: 0 -110px;
-    }
+  .jumbotron.icon-page:before {
+    background-position: 0 -110px;
+  }
 }
 
 #interactive-digital-design {
@@ -48,39 +50,64 @@
 
     &:hover,
     &:focus {
-        color: $gray-lighter;
+      color: $gray-lighter;
     }
   }
 }
 
 #service-offerings {
-    .icon-link {
-        color: $orange;
+  h3 {
+    margin-top: 1.75rem;
+
+    &:first-child {
+      margin-top: 0.5rem;
+    }
+  }
+
+  hr {
+    margin: 1.75rem 0 0.5rem 0;
+  }
+
+  .icon-link {
+    color: $orange;
+    cursor: pointer;
+  }
+
+  .icon-circle {
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
 
-    .icon-circle {
-        &:before {
-            content: "";
-            display: inline-block;
-            height: 100%;
-            width: 100%;
-            background-position: center center;
-            background-repeat: no-repeat;
-        }
-
-        &.icon-web:before {
-            @include background-image(icon-tablet-orange, true, '../../assets/images');
-            background-size: auto 60px;
-        }
-
-        &.icon-online-marketing:before {
-            @include background-image(icon-monitor-usd-orange, true, '../../assets/images');
-            background-size: 60px auto;
-        }
-
-        &.icon-digital-design:before {
-            @include background-image(icon-monitor-play-orange, true, '../../assets/images');
-            background-size: 70px auto;
-        }
+    &.icon-web:before {
+      @include background-image(
+        icon-tablet-orange,
+        true,
+        '../../assets/images'
+      );
+      background-size: auto 60px;
     }
+
+    &.icon-online-marketing:before {
+      @include background-image(
+        icon-monitor-usd-orange,
+        true,
+        '../../assets/images'
+      );
+      background-size: 60px auto;
+    }
+
+    &.icon-digital-design:before {
+      @include background-image(
+        icon-monitor-play-orange,
+        true,
+        '../../assets/images'
+      );
+      background-size: 70px auto;
+    }
+  }
 }

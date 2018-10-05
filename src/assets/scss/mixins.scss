@@ -6,108 +6,56 @@
 
 // Remove Appearance
 @mixin remove-appearance() {
-    -webkit-appearance: none;
-    -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
-
 
 // Remove User Select
 @mixin remove-user-select() {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
-
 
 // Remove Default Button Styles
 @mixin reset-form-element-styles {
-    @include remove-appearance();
-    @include remove-user-select();
-    padding: 0;
-    border: none;
-    background: transparent;
-    outline: none;
+  @include remove-appearance();
+  @include remove-user-select();
+  padding: 0;
+  border: none;
+  background: transparent;
+  outline: none;
 }
-
-
-// Vendor Prefixes
-
-@mixin box-shadow($shadow) {
-    -webkit-box-shadow: $shadow;
-    -moz-box-shadow: $shadow;
-    box-shadow: $shadow;
-}
-
-@mixin border-radius($radius) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    border-radius: $radius;
-}
-
-@mixin background-size($size) {
-    -webkit-background-size: $size;
-    -moz-background-size: $size;
-    -o-background-size: $size;
-    background-size: $size;
-}
-
 
 // Icon Fonts
 @mixin icon-font() {
-    display: inline-block;
-    font-family: "Ionicons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    text-rendering: auto;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-family: 'Ionicons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
-
-// Flex
-
-@mixin display-flex() {
-    display: -webkit-box; 
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex; 
-    display: flex;
-}
-
-@mixin flex-direction($direction) {
-    -webkit-flex-direction: $direction;
-    flex-direction: $direction;
-}
-
-@mixin justify-content($justify) {
-    -webkit-justify-content: $justify;
-    justify-content: $justify;
-}
-
-@mixin align-items($alignment) {
-    -webkit-box-align: $alignment;
-    -moz-box-align: $alignment;
-    -ms-flex-align: $alignment;
-    -webkit-align-items: $alignment;
-    align-items: $alignment;
-}
-
 
 // SVG background images with PNG and retina fallback
 $bitmap-extension: 'png' !default;
 $retina-suffix: '2x';
-@mixin background-image($name, $svg:false, $image-path:'../assets/images'){
-    @if($svg) {
-        background-image: url(#{$image-path}/#{$name}.svg);
-    } @else {
-        background-image: url(#{$image-path}/#{$name}.#{$bitmap-extension});
+@mixin background-image($name, $svg: false, $image-path: '../assets/images') {
+  @if ($svg) {
+    background-image: url(#{$image-path}/#{$name}.svg);
+  } @else {
+    background-image: url(#{$image-path}/#{$name}.#{$bitmap-extension});
 
-        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-          background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$bitmap-extension});
-        }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5),
+      only screen and (-o-min-device-pixel-ratio: 3/2),
+      only screen and (-webkit-min-device-pixel-ratio: 1.5),
+      only screen and (min-device-pixel-ratio: 1.5) {
+      background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$bitmap-extension});
     }
+  }
 }

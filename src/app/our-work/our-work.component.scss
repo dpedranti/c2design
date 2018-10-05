@@ -6,33 +6,35 @@
 // --------------------------------------------------
 
 #our-work {
-    position: relative;
-    z-index: 0;
-    background: transparent url('../../assets/images/fea-c2design-studio-work.jpg') no-repeat left center;
-    @include background-size(cover);
-    color: #fff;
+  position: relative;
+  z-index: 0;
+  background: transparent
+    url('../../assets/images/fea-c2design-studio-work.jpg') no-repeat left
+    center;
+  background-size: cover;
+  color: #fff;
 
-    &:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(theme-color("primary"), 0.5);
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(theme-color('primary'), 0.5);
+  }
+
+  > .container > .row {
+    min-height: 300px;
+
+    > div {
+      display: flex;
+      align-items: center;
     }
+  }
 
-    > .container > .row {
-        min-height: 300px;
-
-        > div {
-            @include display-flex();
-            @include align-items(center);
-        }
-    }
-
-    .jumbotron.icon-page:before {
-        background-position: 0 0;
-    }
+  .jumbotron.icon-page:before {
+    background-position: 0 0;
+  }
 }
 
 #user-centered-design {
@@ -44,41 +46,49 @@
 }
 
 #work-samples {
-    .alert-info {
-        margin-bottom: 3rem;
+  .alert-info {
+    margin-bottom: 3rem;
+  }
+
+  .heading-icon {
+    position: relative;
+    padding-left: 120px;
+    margin-bottom: 3rem;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -13px;
+      left: 0;
+      display: block;
+      height: 75px;
+      width: 90px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      vertical-align: middle;
     }
-    
-    .heading-icon {
-        position: relative;
-        padding-left: 120px;
-        margin-bottom: 3rem;
 
-        &:before {
-            content: "";
-            position: absolute;
-            top: -13px;
-            left: 0;
-            display: block;
-            height: 75px;
-            width: 90px;
-            background-position: center center;
-            background-repeat: no-repeat;
-            vertical-align: middle;
-        }
-
-        &.heading-web:before {
-            @include background-image(icon-tablet-green, true, '../../assets/images');
-            background-size: auto 75px;
-        }
-
-        &.heading-online-marketing:before {
-            @include background-image(icon-monitor-usd-green, true, '../../assets/images');
-            background-size: 75px auto;
-        }
-
-        &.heading-digital-design:before {
-            @include background-image(icon-monitor-play-green, true, '../../assets/images');
-            background-size: 90px auto;
-        }
+    &.heading-web:before {
+      @include background-image(icon-tablet-green, true, '../../assets/images');
+      background-size: auto 75px;
     }
+
+    &.heading-online-marketing:before {
+      @include background-image(
+        icon-monitor-usd-green,
+        true,
+        '../../assets/images'
+      );
+      background-size: 75px auto;
+    }
+
+    &.heading-digital-design:before {
+      @include background-image(
+        icon-monitor-play-green,
+        true,
+        '../../assets/images'
+      );
+      background-size: 90px auto;
+    }
+  }
 }

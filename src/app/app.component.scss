@@ -96,7 +96,7 @@ p {
   position: relative;
   padding-left: 2rem;
 
-  @include border-radius(0);
+  border-radius: 0;
   border-left: 1px solid #fff;
   font-size: 1.5rem;
   font-weight: 300;
@@ -156,7 +156,7 @@ p {
   display: block;
   height: 110px;
   width: 110px;
-  @include border-radius(50%);
+  border-radius: 50%;
   border: 3px solid $gray-lighter;
   text-align: center;
 }
@@ -165,11 +165,11 @@ p {
   display: block;
   height: 50px;
   width: 50px;
-  @include border-radius(50%);
+  border-radius: 50%;
   background-color: $gray-lighter;
   font-size: 34px;
   text-align: center;
-  @include transition(all 0.2s ease-in-out);
+  transition: all 0.2s ease-in-out;
 }
 
 .icon-link {
@@ -181,7 +181,7 @@ p {
 
     .icon-circle {
       background-color: $gray-lighter;
-      @include transition(background-color 0.2s linear);
+      transition: background-color 0.2s linear;
 
       &.anchor-down:before {
         content: '\f35d' !important;
@@ -200,14 +200,15 @@ p {
 }
 
 .icon-menu-horizontal {
-  @include display-flex();
-  @include justify-content(center);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 0;
-  margin: 0 -30px 3rem -30px;
+  margin: 0 -30px 2rem -30px;
   list-style: none;
 
   li {
-    margin: 0 30px;
+    margin: 0 30px 1rem 30px;
     font-size: 21px;
     font-style: italic;
     text-align: center;
@@ -223,8 +224,8 @@ p {
 
 .btn {
   border: none;
-  @include border-radius(0.3rem);
-  @include transition(background-color 0.2s ease-in-out);
+  border-radius: 0.3rem;
+  transition: background-color 0.2s ease-in-out;
 
   &:active {
     position: relative;
@@ -374,7 +375,7 @@ label {
         font-style: italic;
         line-height: 1;
         text-align: left;
-        @include transition(background-color 0.2s ease-in-out);
+        transition: background-color 0.2s ease-in-out;
 
         &:after {
           content: '\f126';
@@ -436,6 +437,18 @@ label {
 
       &:before {
         content: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .accordion {
+    .card {
+      .card-header {
+        button {
+          font-size: 1.625rem;
+        }
       }
     }
   }

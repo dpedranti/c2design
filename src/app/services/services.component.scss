@@ -11,7 +11,7 @@
   background: transparent
     url('../../assets/images/fea-c2design-studio-services.jpg') no-repeat left
     center;
-  @include background-size(cover);
+  background-size: cover;
   color: #fff;
 
   &:before {
@@ -27,8 +27,8 @@
     min-height: 300px;
 
     > div {
-      @include display-flex();
-      @include align-items(center);
+      display: flex;
+      align-items: center;
     }
   }
 

@@ -135,12 +135,16 @@ p {
     }
   }
 
-  &.icon-ul-inline li {
-    &:not(:first-child) {
-      margin-left: 1rem;
-    }
+  &.icon-ul-inline {
+    li {
+      margin-top: 0;
 
-    display: inline-block;
+      &:not(:first-child) {
+        margin-left: 1rem;
+      }
+
+      display: inline-block;
+    }
   }
 }
 
@@ -240,6 +244,10 @@ p {
   &:focus {
     background-color: darken($gray-dark, 10%);
   }
+}
+
+.btn-default {
+  background-color: $gray-lighter;
 }
 
 .btn-white {

@@ -2,85 +2,74 @@
 //
 // Custom overrides to Bootstrap default variables
 
-
 // Colors
 
-$white:  #fff !default;
-$black:  #000 !default;
-$blue:   #007eb7 !default;
-$red:    #cd2026 !default;
+$white: #fff !default;
+$black: #000 !default;
+$blue: #007eb7 !default;
+$red: #cd2026 !default;
 $orange: #da4c29 !default;
 $yellow: #f9c642 !default;
-$green:  #67ad44 !default;
-$teal:   #089c94 !default;
+$green: #67ad44 !default;
+$teal: #089c94 !default;
 
-$gray-darker:               #212121 !default;
-$gray-dark:                 #323a45 !default;
-$gray:                      #5b616b !default;
-$gray-light:                #aeb0b5 !default;
-$gray-lighter:              #e5e5e5 !default;
-$gray-lightest:             #f1f1f1 !default;
-$gray-warm-dark:            #494440 !default;
+$gray-darker: #212121 !default;
+$gray-dark: #323a45 !default;
+$gray: #5b616b !default;
+$gray-light: #aeb0b5 !default;
+$gray-lighter: #d6d7d9 !default;
+$gray-lightest: #f1f1f1 !default;
+$gray-warm-dark: #494440 !default;
 
 $gray-800: $gray-darker !default;
 
-
 // Options
 
-$enable-rounded:            false !default;
-
+$enable-rounded: false !default;
 
 // Spacing
 
-$spacer:   1rem !default;
-
+$spacer: 1rem !default;
 
 // Fonts
 
-$font-family-sans-serif: "Lato", Roboto, Arial, sans-serif !default;
+$font-family-sans-serif: 'Lato', Roboto, Arial, sans-serif !default;
 
 $h1-font-size: 3rem !default;
 $h2-font-size: 3.5rem !default;
 $h3-font-size: 2.5rem !default;
 
 $headings-margin-bottom: $spacer !default;
-$headings-font-weight:   400 !default;
-
+$headings-font-weight: 400 !default;
 
 // Buttons
 
-$btn-box-shadow:                 1px 1px 7px 0 rgba($black,.23) !default;
-
+$btn-box-shadow: 1px 1px 7px 0 rgba($black, 0.23) !default;
 
 // Forms
 
-$input-border-color:             lighten($gray-light, 10%) !default;
+$input-border-color: lighten($gray-light, 10%) !default;
 
-$form-group-margin-bottom:       2rem !default;
-
+$form-group-margin-bottom: 1.75rem !default;
 
 // Navbar
 
-$navbar-padding-y:                  1rem !default;
+$navbar-padding-y: 1rem !default;
 
-$navbar-dark-toggler-border-color:  rgba($white,.2) !default;
-
+$navbar-dark-toggler-border-color: rgba($white, 0.2) !default;
 
 // Navs
 
-$nav-link-padding-x:              1.5em !default;
-
+$nav-link-padding-x: 1.5em !default;
 
 // Jumbotron
 
-$jumbotron-padding:              0 !default;
-$jumbotron-bg:                   transparent !default;
-
+$jumbotron-padding: 0 !default;
+$jumbotron-bg: transparent !default;
 
 // Alerts
 
-$alert-margin-bottom:         2rem !default;
-
+$alert-margin-bottom: 2rem !default;
 
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';

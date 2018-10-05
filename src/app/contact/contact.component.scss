@@ -38,13 +38,25 @@
 }
 
 #c2-design-studio {
-  .icon-circle-solid {
-    background-color: $gray-warm-dark;
-    color: #fff;
+  .contact-info {
+    margin-bottom: 2.125rem;
 
-    &:hover,
-    &:focus {
-      background-color: lighten($gray-warm-dark, 30%);
+    .contact-title {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .social-media-links {
+    margin-bottom: 1.125rem;
+
+    .icon-circle-solid {
+      background-color: $gray-warm-dark;
+      color: #fff;
+
+      &:hover,
+      &:focus {
+        background-color: lighten($gray-warm-dark, 30%);
+      }
     }
   }
 }
@@ -58,16 +70,6 @@
 
   > .container {
     padding: 5rem 30px;
-  }
-
-  a {
-    color: #fff;
-    text-decoration: underline;
-
-    &:hover,
-    &:focus {
-      color: $gray-lighter;
-    }
   }
 }
 

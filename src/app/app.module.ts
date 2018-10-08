@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
@@ -15,9 +14,6 @@ import { CoreModule } from './core/core.module';
     BrowserModule,
     CoreModule,
     NgbModule.forRoot(),
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBF1inD8C1JSEbDnj-GgWbBlwkgHCeOlCg'
-    }),
     HomeModule,
     AppRoutingModule
   ],

@@ -37,7 +37,19 @@
   }
 }
 
-#c2-design-studio {
+#our-designers {
+  background-color: $gray-warm-dark;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+
+  > .container {
+    padding: 5rem 30px;
+  }
+}
+
+#contact-info {
   .contact-info {
     margin-bottom: 2.125rem;
 
@@ -58,23 +70,5 @@
         background-color: lighten($gray-warm-dark, 30%);
       }
     }
-  }
-}
-
-#our-designers {
-  background-color: $gray-warm-dark;
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 300;
-  text-align: center;
-
-  > .container {
-    padding: 5rem 30px;
-  }
-}
-
-#location-map {
-  agm-map {
-    height: 300px;
   }
 }

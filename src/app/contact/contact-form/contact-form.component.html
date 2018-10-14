@@ -1,4 +1,4 @@
-<div class="contact-form" [hidden]="submitted">
+<div class="contact-form" *ngIf="!submitted">
   <p class="small">Fields marked with an asterisk (<span class="text-red">*</span>) are required.</p>
   <form (ngSubmit)="onSubmit()" #appContactForm="ngForm">
     <div class="row">
@@ -87,45 +87,50 @@
   </form>
 </div>
 
-<div [hidden]="!submitted">
+<div *ngIf="submitted">
   <h3>Thank You!</h3>
   <p>We have received your form submission and will be in touch soon.</p>
-  <div class="row">
-    <div class="col-sm-6">Name:</div>
-    <div class="col-sm-6">{{ model.name }}</div>
+  <div class="contact-submission-data">
+    <div class="row">
+      <div class="col-sm-6">Name:</div>
+      <div class="col-sm-6">{{ model.name }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">Company/Organization:</div>
+      <div class="col-sm-6">{{ model.company }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">Email:</div>
+      <div class="col-sm-6">{{ model.email }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">Address:</div>
+      <div class="col-sm-6">{{ model.address }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">City:</div>
+      <div class="col-sm-6">{{ model.city }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">State/Province:</div>
+      <div class="col-sm-6">{{ model.state }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">Zip/Postal Code:</div>
+      <div class="col-sm-6">{{ model.zip }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">Country:</div>
+      <div class="col-sm-6">{{ model.country }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">Comments/Questions:</div>
+      <div class="col-sm-6">{{ model.comments }}</div>
+    </div>
   </div>
-  <div class="row">
-    <div class="col-sm-6">Company/Organization:</div>
-    <div class="col-sm-6">{{ model.company }}</div>
+  <div class="row btn-row">
+    <div class="col-sm-12">
+      <button class="btn btn-default btn-lg" (click)="submitted=false">Back</button>
+    </div>
   </div>
-  <div class="row">
-    <div class="col-sm-6">Email:</div>
-    <div class="col-sm-6">{{ model.email }}</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">Address:</div>
-    <div class="col-sm-6">{{ model.address }}</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">City:</div>
-    <div class="col-sm-6">{{ model.city }}</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">State/Province:</div>
-    <div class="col-sm-6">{{ model.state }}</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">Zip/Postal Code:</div>
-    <div class="col-sm-6">{{ model.zip }}</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">Country:</div>
-    <div class="col-sm-6">{{ model.country }}</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">Comments/Questions:</div>
-    <div class="col-sm-6">{{ model.comments }}</div>
-  </div>
-  <br>
-  <button class="btn btn-primary" (click)="submitted=false">Edit</button>
 </div>

@@ -287,19 +287,19 @@ label {
   position: relative;
   min-height: 66px;
   border: none;
-  padding: 20px 15px 15px 66px;
+  padding: 20px 15px 15px 60px;
   color: $gray-dark;
 
   &:before {
     content: '';
     position: absolute;
-    top: 12px;
+    top: 13px;
     left: 15px;
     display: block;
     height: 40px;
     width: 40px;
     @include icon-font();
-    font-size: 44px;
+    font-size: 40px;
   }
 
   &.alert-success {
@@ -307,7 +307,7 @@ label {
     border-color: darken($green, 10%);
 
     &:before {
-      content: '\f3fe';
+      content: '\f120';
       color: darken($green, 5%);
     }
   }
@@ -317,7 +317,7 @@ label {
     border-color: darken($blue, 10%);
 
     &:before {
-      content: '\f44c';
+      content: '\f149';
       color: $blue;
     }
   }

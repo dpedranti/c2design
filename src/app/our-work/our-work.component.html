@@ -1,10 +1,29 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">{{ modalTitle }}</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Close click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <img src="{{ modalImage }}" class="img-fluid" alt="{{ modalTitle }}" />
+  </div>
+</ng-template>
+
 <section id="our-work">
   <div class="container">
     <div class="row">
       <div class="col-md-10 col-lg-8 mx-auto">
         <div class="jumbotron icon-page">
           <h1>our work</h1>
-          <p>Our focus is a visually appealing design with great user experience.</p>
+          <p>
+            Our focus is a visually appealing design with great user experience.
+          </p>
         </div>
       </div>
     </div>
@@ -15,51 +34,64 @@
     <div class="row">
       <div class="col-lg-10 mx-auto">
         <h2 class="separator white">User-Centered Design</h2>
-        <p>C2 Design Studio follows a user-centered design approach. We believe if you focus on 
-          the wants and needs of the user, good ROI will surely follow.</p>
-        <p>Derrick Pedranti and the C2 Design Studio team have designed and developed websites and 
-          applications for small businesses, Fortune 500 companies and government agencies.</p>
-        <p>Below are just a few examples of our work. Please contact us for additional samples.</p>
+        <p>
+          C2 Design Studio follows a user-centered design approach. We believe
+          if you focus on the wants and needs of the user, good ROI will surely
+          follow.
+        </p>
+        <p>
+          Derrick Pedranti and the C2 Design Studio team have designed and
+          developed websites and applications for small businesses, Fortune 500
+          companies and government agencies.
+        </p>
+        <p>
+          Below are just a few examples of work by Derrick Pedranti. Please
+          contact us for additional samples.
+        </p>
       </div>
     </div>
   </div>
 </section>
 <section id="work-samples">
   <div class="container">
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <div class="alert alert-info" role="alert">
-              Note that some of the websites contained in this portfolio may have been modified by other 
-              parties since the <span class="text-nowrap">original design.</span>
-          </div>
-          <h3 class="heading-icon heading-web">Web</h3>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  Portfolio Item
-                </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="alert alert-info" role="alert">
+          <p>
+            On the Web designs, corporate identity and content have been made
+            generic.
+          </p>
+        </div>
+        <h3 class="heading-icon heading-web">Web</h3>
+        <div class="row">
+          <div *ngFor="let portfolioItem of portfolio" class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <button
+                  class="btn btn-link"
+                  (click)="openModal(content, portfolioItem)"
+                >
+                  <img
+                    src="{{ portfolioItem.img }}"
+                    class="img-fluid"
+                    alt="{{ portfolioItem.title }}"
+                  />
+                </button>
               </div>
             </div>
-            <div class="col-sm-6">
-                <div class="card">
-                  <div class="card-body">
-                    Portfolio Item
-                  </div>
-                </div>
-            </div>
           </div>
-          <br />
-          <br />
-          <h3 class="heading-icon heading-online-marketing">Online Marketing</h3>
-          <p>[samples here]</p>
-          <br />
-          <br />
-          <h3 class="heading-icon heading-digital-design">Digital Design</h3>
-          <p>[samples here]</p>
-          <br />
-          <br />
         </div>
+        <br />
+        <br />
+        <h3 class="heading-icon heading-online-marketing">Online Marketing</h3>
+        <p>[samples here]</p>
+        <br />
+        <br />
+        <h3 class="heading-icon heading-digital-design">Digital Design</h3>
+        <p>[samples here]</p>
+        <br />
+        <br />
       </div>
     </div>
+  </div>
 </section>

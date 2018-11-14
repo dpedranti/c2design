@@ -120,6 +120,33 @@
           rgba(255, 255, 255, 1) 100%
         );
       }
+
+      .btn__hover-modal {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 101%;
+        background-color: rgba($color: #000, $alpha: 0.5);
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &:before {
+          content: '\f2f5';
+          position: relative;
+          top: -40px;
+          display: block;
+          margin-top: 50%;
+          @include icon-font();
+          color: #fff;
+          font-size: 80px;
+        }
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { PORTFOLIO } from './portfolio-items';
+import { PORTFOLIO_WEB, PORTFOLIO_MARKETING } from './portfolio-items';
 
 @Component({
   selector: 'app-our-work',
@@ -11,7 +11,8 @@ export class OurWorkComponent implements OnInit {
   modalImage: string;
   modalTitle: string;
 
-  portfolio = PORTFOLIO;
+  portfolioWeb = PORTFOLIO_WEB;
+  portfolioMarketing = PORTFOLIO_MARKETING;
 
   constructor(private modalService: NgbModal) {}
 

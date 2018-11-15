@@ -1,6 +1,6 @@
 import { Portfolio } from './portfolio';
 
-export const PORTFOLIO: Portfolio[] = [
+export const PORTFOLIO_WEB: Portfolio[] = [
   {
     img: '../../assets/images/portfolio-web-enrollment-home.jpg',
     title: 'Provider Enrollment Website'
@@ -32,5 +32,16 @@ export const PORTFOLIO: Portfolio[] = [
   {
     img: '../../assets/images/portfolio-web-food-finder.jpg',
     title: 'Food Finder Website'
+  }
+];
+
+export const PORTFOLIO_MARKETING: Portfolio[] = [
+  {
+    img: '../../assets/images/portfolio-email-top-tower-new-year.jpg',
+    title: 'Top of the Tower Happy New Year Email'
+  },
+  {
+    img: '../../assets/images/portfolio-email-top-tower-anniversary.jpg',
+    title: 'Top of the Tower Happy Anniversary Email Template'
   }
 ];

@@ -64,17 +64,17 @@
         </div>
         <h3 class="heading-icon heading-web">Web</h3>
         <div class="row">
-          <div *ngFor="let portfolioItem of portfolio" class="col-sm-6">
+          <div *ngFor="let portfolio of portfolioWeb" class="col-sm-6">
             <div class="card">
               <div class="card-body">
                 <button
                   class="btn btn-link"
-                  (click)="openModal(content, portfolioItem)"
+                  (click)="openModal(content, portfolio)"
                 >
                   <img
-                    src="{{ portfolioItem.img }}"
+                    src="{{ portfolio.img }}"
                     class="img-fluid"
-                    alt="{{ portfolioItem.title }}"
+                    alt="{{ portfolio.title }}"
                   />
                   <span class="btn__hover-modal"></span>
                 </button>
@@ -85,7 +85,25 @@
         <br />
         <br />
         <h3 class="heading-icon heading-online-marketing">Online Marketing</h3>
-        <p>[samples here]</p>
+        <div class="row">
+          <div *ngFor="let portfolio of portfolioMarketing" class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <button
+                  class="btn btn-link"
+                  (click)="openModal(content, portfolio)"
+                >
+                  <img
+                    src="{{ portfolio.img }}"
+                    class="img-fluid"
+                    alt="{{ portfolio.title }}"
+                  />
+                  <span class="btn__hover-modal"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <br />
         <br />
         <h3 class="heading-icon heading-digital-design">Digital Design</h3>

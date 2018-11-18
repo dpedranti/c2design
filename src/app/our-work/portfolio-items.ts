@@ -1,6 +1,6 @@
 import { Portfolio } from './portfolio';
 
-export const PORTFOLIO_WEB: Portfolio[] = [
+export const WEB: Portfolio[] = [
   {
     img: '../../assets/images/portfolio-web-enrollment-home.jpg',
     title: 'Provider Enrollment Website'
@@ -35,7 +35,7 @@ export const PORTFOLIO_WEB: Portfolio[] = [
   }
 ];
 
-export const PORTFOLIO_MARKETING: Portfolio[] = [
+export const MARKETING: Portfolio[] = [
   {
     img: '../../assets/images/portfolio-email-top-tower-new-year.jpg',
     title: 'Top of the Tower Happy New Year Email'
@@ -43,5 +43,13 @@ export const PORTFOLIO_MARKETING: Portfolio[] = [
   {
     img: '../../assets/images/portfolio-email-top-tower-anniversary.jpg',
     title: 'Top of the Tower Happy Anniversary Email Template'
+  }
+];
+
+export const DIGITAL_SIGNAGE: Portfolio[] = [
+  {
+    img: '../../assets/images/portfolio-digital-signage-im-division-01.jpg',
+    video: 'http://vjs.zencdn.net/v/oceans.mp4',
+    title: 'Ingram Micro Digital Signage Division'
   }
 ];

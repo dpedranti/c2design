@@ -11,7 +11,12 @@
     </button>
   </div>
   <div class="modal-body">
-    <img src="{{ modalImage }}" class="img-fluid" alt="{{ modalTitle }}" />
+    <div *ngIf="!!modalVideo; else: elseBlock">
+      <app-videojs idx="{{ modalIndex }}" url="{{ modalVideo }}"></app-videojs>
+    </div>
+    <ng-template #elseBlock>
+      <img src="{{ modalImage }}" class="img-fluid" alt="{{ modalTitle }}" />
+    </ng-template>
   </div>
 </ng-template>
 
@@ -64,7 +69,7 @@
         </div>
         <h3 class="heading-icon heading-web">Web</h3>
         <div class="row">
-          <div *ngFor="let portfolio of portfolioWeb" class="col-sm-6">
+          <div *ngFor="let portfolio of web" class="col-sm-6">
             <div class="card">
               <div class="card-body">
                 <button
@@ -86,7 +91,7 @@
         <br />
         <h3 class="heading-icon heading-online-marketing">Online Marketing</h3>
         <div class="row">
-          <div *ngFor="let portfolio of portfolioMarketing" class="col-sm-6">
+          <div *ngFor="let portfolio of marketing" class="col-sm-6">
             <div class="card">
               <div class="card-body">
                 <button
@@ -107,7 +112,25 @@
         <br />
         <br />
         <h3 class="heading-icon heading-digital-design">Digital Design</h3>
-        <p>[samples here]</p>
+        <div class="row">
+          <div *ngFor="let portfolio of digitalSignage" class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <button
+                  class="btn btn-link"
+                  (click)="openModal(content, portfolio)"
+                >
+                  <img
+                    src="{{ portfolio.img }}"
+                    class="img-fluid"
+                    alt="{{ portfolio.title }}"
+                  />
+                  <span class="btn__hover-modal"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <br />
         <br />
       </div>

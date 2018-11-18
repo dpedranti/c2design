@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { PORTFOLIO_WEB, PORTFOLIO_MARKETING } from './portfolio-items';
+import { uniqueId } from 'lodash';
+import { WEB, MARKETING, DIGITAL_SIGNAGE } from './portfolio-items';
 
 @Component({
   selector: 'app-our-work',
@@ -9,17 +10,22 @@ import { PORTFOLIO_WEB, PORTFOLIO_MARKETING } from './portfolio-items';
 })
 export class OurWorkComponent implements OnInit {
   modalImage: string;
+  modalVideo: string;
   modalTitle: string;
+  modalIndex: string;
 
-  portfolioWeb = PORTFOLIO_WEB;
-  portfolioMarketing = PORTFOLIO_MARKETING;
+  web = WEB;
+  marketing = MARKETING;
+  digitalSignage = DIGITAL_SIGNAGE;
 
   constructor(private modalService: NgbModal) {}
 
   openModal(content, portfolioItem) {
     this.modalService.open(content, { size: 'lg' });
     this.modalImage = portfolioItem.img;
+    this.modalVideo = portfolioItem.video;
     this.modalTitle = portfolioItem.title;
+    this.modalIndex = uniqueId();
   }
 
   ngOnInit() {}

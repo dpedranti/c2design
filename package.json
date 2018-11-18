@@ -33,6 +33,8 @@
     "ionicons-npm": "^2.0.1",
     "moment": "^2.18.1",
     "rxjs": "^6.2.2",
+    "video.js": "^7.3.0",
+    "videojs-swf": "^5.4.2",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {

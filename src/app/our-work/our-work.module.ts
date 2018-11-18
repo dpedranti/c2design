@@ -7,8 +7,10 @@ import {
   routedComponents
 } from './our-work-routing.module';
 
+import { VideoJSComponent } from './videojs.component';
+
 @NgModule({
   imports: [OurWorkRoutingModule, CommonModule, NgbModule],
-  declarations: [routedComponents]
+  declarations: [routedComponents, VideoJSComponent]
 })
 export class OurWorkModule {}

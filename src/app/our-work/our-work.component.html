@@ -11,8 +11,12 @@
     </button>
   </div>
   <div class="modal-body">
-    <div *ngIf="!!modalVideo; else: elseBlock">
-      <app-videojs idx="{{ modalIndex }}" url="{{ modalVideo }}"></app-videojs>
+    <div *ngIf="!!modalSwf; else: elseBlock">
+      <app-swf
+        idx="{{ modalIndex }}"
+        url="{{ modalSwf }}"
+        className="modal-work-sample-swf"
+      ></app-swf>
     </div>
     <ng-template #elseBlock>
       <img src="{{ modalImage }}" class="img-fluid" alt="{{ modalTitle }}" />

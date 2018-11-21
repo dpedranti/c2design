@@ -10,7 +10,7 @@ import { WEB, MARKETING, DIGITAL_SIGNAGE } from './portfolio-items';
 })
 export class OurWorkComponent implements OnInit {
   modalImage: string;
-  modalVideo: string;
+  modalSwf: string;
   modalTitle: string;
   modalIndex: string;
 
@@ -23,7 +23,7 @@ export class OurWorkComponent implements OnInit {
   openModal(content, portfolioItem) {
     this.modalService.open(content, { size: 'lg' });
     this.modalImage = portfolioItem.img;
-    this.modalVideo = portfolioItem.video;
+    this.modalSwf = portfolioItem.swf;
     this.modalTitle = portfolioItem.title;
     this.modalIndex = uniqueId();
   }

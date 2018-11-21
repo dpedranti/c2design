@@ -1,0 +1,18 @@
+.flash-content {
+  width: 100%;
+  height: 100%;
+}
+
+$modal-work-sample-ratio: 786/1366;
+
+.modal-work-sample-swf {
+  height: 768px * $modal-work-sample-ratio;
+
+  @media (max-width: 991px) {
+    height: 468px * $modal-work-sample-ratio;
+  }
+
+  @media (max-width: 575px) {
+    height: 527px * $modal-work-sample-ratio;
+  }
+}

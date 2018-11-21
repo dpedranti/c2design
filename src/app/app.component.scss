@@ -302,7 +302,17 @@ label {
 }
 
 .modal-body {
+  background-color: #fff;
   box-shadow: 1px 1px 9px 0 rgba($black, 0.33);
+}
+
+.modal-content {
+  padding: 1rem;
+
+  .align-middle {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 }
 
 // Alerts

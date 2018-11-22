@@ -1,5 +1,5 @@
 export class Portfolio {
   img: string;
-  swf?: string;
+  video?: string;
   title: string;
 }

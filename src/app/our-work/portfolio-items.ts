@@ -49,7 +49,12 @@ export const MARKETING: Portfolio[] = [
 export const DIGITAL_SIGNAGE: Portfolio[] = [
   {
     img: '../../assets/images/portfolio-digital-signage-im-division-01.jpg',
-    swf: '../../assets/media/im_dig_sign_division_01.swf',
+    video: '../../assets/media/im_dig_sign_division_01.mp4',
+    title: 'Ingram Micro Digital Signage Division'
+  },
+  {
+    img: '../../assets/images/portfolio-digital-signage-im-division-03.jpg',
+    video: '../../assets/media/im_dig_sign_division_03.mp4',
     title: 'Ingram Micro Digital Signage Division'
   }
 ];

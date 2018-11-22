@@ -11,8 +11,8 @@ import videojs from 'video.js';
       class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9"
       controls
       preload="auto"
-      width="800"
-      height="450"
+      width="768"
+      height="432"
     >
       <source [src]="url" type="video/mp4" />
     </video>
@@ -37,7 +37,7 @@ export class VideoJSComponent implements OnInit, AfterViewInit {
     this.player = videojs(document.getElementById(el), {}, function() {
       const videoPlayer = this;
       const id = videoPlayer.id();
-      const aspectRatio = 450 / 800;
+      const aspectRatio = 768 / 1366;
 
       function resizeVideoJS() {
         const width = document.getElementById(id).parentElement.offsetWidth;

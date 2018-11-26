@@ -1,4 +1,4 @@
-import { Portfolio } from '../../portfolio';
+import { Portfolio } from './portfolio';
 
 export const WEB: Portfolio[] = [
   {
@@ -63,18 +63,18 @@ export const DIGITAL_SIGNAGE: Portfolio[] = [
     title: 'Ingram Micro Digital Signage Division'
   },
   {
-    thumb: '../../assets/images/thumb-digital-signage-im-division-03.jpg',
-    video: '../../assets/media/im_dig_sign_division_03.mp4',
+    thumb: '../../assets/images/thumb-digital-signage-im-division-02.jpg',
+    video: '../../assets/media/im_dig_sign_division_02.mp4',
     title: 'Ingram Micro Digital Signage Division'
   },
   {
-    thumb: '../../assets/images/thumb-digital-signage-im-division-03.jpg',
-    video: '../../assets/media/im_dig_sign_ps_level3.mp4',
+    thumb: '../../assets/images/thumb-digital-signage-im-partner-smart.jpg',
+    video: '../../assets/media/im_dig_sign_partner_smart.mp4',
     title: 'Ingram Micro Partner Smart'
   },
   {
-    thumb: '../../assets/images/thumb-digital-signage-im-division-03.jpg',
-    video: '../../assets/media/im_dig_sign_exigent_cake_boss.mp4',
-    title: 'Ingram Micro Digital Signage – Cake Boss'
+    thumb: '../../assets/images/thumb-digital-signage-im-exigent.jpg',
+    video: '../../assets/media/im_dig_sign_exigent_exigent.mp4',
+    title: 'Ingram Micro Digital Signage – Exigent Technologies'
   }
 ];

@@ -12,10 +12,10 @@
   </div>
   <div class="modal-body">
     <div *ngIf="!!modalVideo; else: elseBlock">
-      <app-videojs idx="{{ modalIndex }}" url="{{ modalVideo }}"></app-videojs>
+      <app-videojs [idx]="modalIndex" [url]="modalVideo"></app-videojs>
     </div>
     <ng-template #elseBlock>
-      <img src="{{ modalImage }}" class="img-fluid" alt="{{ modalTitle }}" />
+      <img [src]="modalImage" class="img-fluid" [alt]="modalTitle" />
     </ng-template>
   </div>
 </ng-template>
@@ -77,9 +77,9 @@
                   (click)="openModal(content, portfolio)"
                 >
                   <img
-                    src="{{ portfolio.thumb }}"
+                    [src]="portfolio.thumb"
                     class="img-fluid"
-                    alt="{{ portfolio.title }}"
+                    [alt]="portfolio.title"
                   />
                   <span class="btn__hover-modal"></span>
                 </button>
@@ -99,9 +99,9 @@
                   (click)="openModal(content, portfolio)"
                 >
                   <img
-                    src="{{ portfolio.thumb }}"
+                    [src]="portfolio.thumb"
                     class="img-fluid"
-                    alt="{{ portfolio.title }}"
+                    [alt]="portfolio.title"
                   />
                   <span class="btn__hover-modal"></span>
                 </button>
@@ -121,9 +121,9 @@
                   (click)="openModal(content, portfolio)"
                 >
                   <img
-                    src="{{ portfolio.thumb }}"
+                    [src]="portfolio.thumb"
                     class="img-fluid"
-                    alt="{{ portfolio.title }}"
+                    [alt]="portfolio.title"
                   />
                   <span class="btn__hover-modal"></span>
                 </button>

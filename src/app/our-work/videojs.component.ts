@@ -10,17 +10,19 @@ import videojs from 'video.js';
       id="video_{{idx}}"
       class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9"
       controls
+      autoplay
       preload="auto"
       width="768"
       height="432"
     >
-      <source [src]="url" type="video/mp4" />
+      <source [src]="url" [type]="type" />
     </video>
   `
 })
 export class VideoJSComponent implements OnInit, AfterViewInit {
   @Input() idx: string;
   @Input() url: any;
+  @Input() type = 'video/mp4';
 
   private player: any;
 

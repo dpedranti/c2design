@@ -48,9 +48,9 @@ $btn-box-shadow: 1px 1px 7px 0 rgba($black, 0.23) !default;
 
 // Forms
 
-$input-border-color: lighten($gray-light, 10%) !default;
+$input-border-color: $gray-light !default;
 
-$form-group-margin-bottom: 1.75rem !default;
+$form-group-margin-bottom: 1.5rem !default;
 
 // Navbar
 

@@ -24,7 +24,7 @@
   }
 
   > .container > .row {
-    min-height: 300px;
+    min-height: (300rem / 16);
 
     > div {
       display: flex;
@@ -33,7 +33,7 @@
   }
 
   .jumbotron.icon-page:before {
-    background-position: 0 -330px;
+    background-position: 0 (-330rem / 16);
   }
 }
 
@@ -45,7 +45,7 @@
   text-align: center;
 
   > .container {
-    padding: 5rem 30px;
+    padding: 5rem (30rem / 16);
   }
 }
 

@@ -14,6 +14,7 @@ import countries from 'country-list';
 export class ContactFormComponent {
   private countryNames = countries().getNames();
   private stateNames = states;
+  public readonly siteKey = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
 
   contactForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
@@ -28,7 +29,8 @@ export class ContactFormComponent {
     state: new FormControl('', [Validators.required]),
     zip: new FormControl(''),
     country: new FormControl('', [Validators.required]),
-    comments: new FormControl('')
+    comments: new FormControl(''),
+    recaptcha: new FormControl('', [Validators.required])
   });
 
   get name() {
@@ -55,13 +57,12 @@ export class ContactFormComponent {
     text$.pipe(
       debounceTime(200),
       distinctUntilChanged(),
-      map(
-        term =>
-          term.length < 2
-            ? []
-            : this.stateNames
-                .filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1)
-                .slice(0, 10)
+      map(term =>
+        term.length < 2
+          ? []
+          : this.stateNames
+              .filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1)
+              .slice(0, 10)
       )
     );
 
@@ -69,13 +70,12 @@ export class ContactFormComponent {
     text$.pipe(
       debounceTime(200),
       distinctUntilChanged(),
-      map(
-        term =>
-          term.length < 2
-            ? []
-            : this.countryNames
-                .filter(c => c.toLowerCase().indexOf(term.toLowerCase()) > -1)
-                .slice(0, 10)
+      map(term =>
+        term.length < 2
+          ? []
+          : this.countryNames
+              .filter(c => c.toLowerCase().indexOf(term.toLowerCase()) > -1)
+              .slice(0, 10)
       )
     );
 }

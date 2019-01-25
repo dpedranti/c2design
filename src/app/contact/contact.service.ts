@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError, tap, map } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 import { IContact } from './contact';
 
 @Injectable({
@@ -35,7 +35,7 @@ export class ContactService {
         err.message
       }`;
     }
-    console.log(errorMessage);
+    console.error(errorMessage);
     return throwError(errorMessage);
   }
 }

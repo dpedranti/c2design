@@ -87,13 +87,12 @@ export class ContactFormComponent {
     );
 
   onSubmit() {
-    // this.contactService.saveContact();
-    this.contactService.getContact(1).subscribe(
-      contact => {
+    this.contactService.saveContact(this.contactForm.value).subscribe(
+      (contact: IContact[]) => {
         this.contact = contact;
         this.submitted = true;
       },
-      error => (this.errorMessage = <any>error)
+      (err: any) => console.error(err)
     );
   }
 }

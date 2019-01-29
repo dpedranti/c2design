@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
+import {
+  debounceTime,
+  distinctUntilChanged,
+  map,
+  mergeMap
+} from 'rxjs/operators';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import states from 'datasets-us-states-names';
 import countries from 'country-list';
@@ -18,7 +23,6 @@ export class ContactFormComponent {
   public readonly siteKey = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
 
   submitted = false;
-  errorMessage = '';
   contact: IContact[] | undefined;
 
   contactForm = new FormGroup({
@@ -87,12 +91,31 @@ export class ContactFormComponent {
     );
 
   onSubmit() {
-    this.contactService.saveContact(this.contactForm.value).subscribe(
-      (contact: IContact[]) => {
-        this.contact = contact;
-        this.submitted = true;
-      },
-      (err: any) => console.error(err)
-    );
+    this.contactService
+      .saveContact(this.contactForm.value)
+      .pipe(
+        mergeMap(contact => {
+          const emailMessage = {
+            to: 'derrick@c2designstudio.com', // TODO: Get from config
+            subject: 'C2 Design Contact Form Submission',
+            name: 'C2 Design',
+            html: Object.keys(contact)
+              .map(k => `<p>${k}: ${contact[k]}</p>`)
+              .join(' ')
+          };
+          return this.contactService.emailContact(emailMessage);
+        })
+      )
+      .subscribe(
+        (contact: IContact[]) => {
+          // TODO: Maybe do this even if emailContact fails...
+          this.contact = contact;
+          this.submitted = true;
+        },
+        (err: any) => {
+          // TODO: Put error message in a Toast
+          console.error(err);
+        }
+      );
   }
 }

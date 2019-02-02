@@ -36,15 +36,10 @@ export class ContactService {
   }
 
   private handleError(err: HttpErrorResponse) {
-    let errorMessage;
-    if (err.error) {
-      errorMessage = `An error occurred: ${err.error.message}`;
-    } else {
-      errorMessage = `Server returned code: ${err.status}. Error message: ${
-        err.message
-      }`;
-    }
-    console.error(errorMessage);
+    const errorMessage = `Server returned code: ${err.status}. Error message: ${
+      err.message
+    }`;
+    console.error(err);
     return throwError(errorMessage);
   }
 }

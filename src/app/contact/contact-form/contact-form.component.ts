@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
-import {
-  debounceTime,
-  distinctUntilChanged,
-  map,
-  mergeMap
-} from 'rxjs/operators';
+import { Observable, forkJoin } from 'rxjs';
+import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import states from 'datasets-us-states-names';
 import countries from 'country-list';
@@ -91,31 +86,24 @@ export class ContactFormComponent {
     );
 
   onSubmit() {
-    this.contactService
-      .saveContact(this.contactForm.value)
-      .pipe(
-        mergeMap(contact => {
-          const emailMessage = {
-            to: 'derrick@c2designstudio.com', // TODO: Get from config
-            subject: 'C2 Design Contact Form Submission',
-            name: 'C2 Design',
-            html: Object.keys(contact)
-              .map(k => `<p>${k}: ${contact[k]}</p>`)
-              .join(' ')
-          };
-          return this.contactService.emailContact(emailMessage);
-        })
-      )
-      .subscribe(
-        (contact: IContact[]) => {
-          // TODO: Maybe do this even if emailContact fails...
-          this.contact = contact;
-          this.submitted = true;
-        },
-        (err: any) => {
-          // TODO: Put error message in a Toast
-          console.error(err);
-        }
-      );
+    const { value } = this.contactForm;
+    const keys = Object.keys(value).filter(k => k !== 'recaptcha');
+    const emailMessage = {
+      to: 'derrick@c2designstudio.com', // TODO: Get from config
+      subject: 'C2 Design Contact Form Submission',
+      name: 'C2 Design',
+      html: keys.map(k => `<p>${k}: ${value[k]}</p>`)
+    };
+    const saveContact = this.contactService.saveContact(value);
+    const emailContact = this.contactService.emailContact(emailMessage);
+    forkJoin([saveContact, emailContact]).subscribe(
+      response => {
+        this.contact = response[0];
+        this.submitted = true;
+      },
+      (err: any) => {
+        console.error(err);
+      }
+    );
   }
 }

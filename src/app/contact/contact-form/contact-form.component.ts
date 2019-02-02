@@ -92,7 +92,7 @@ export class ContactFormComponent {
       to: 'derrick@c2designstudio.com', // TODO: Get from config
       subject: 'C2 Design Contact Form Submission',
       name: 'C2 Design',
-      html: keys.map(k => `<p>${k}: ${value[k]}</p>`)
+      html: keys.map(k => `<p>${k}: ${value[k]}</p>`).join(' ')
     };
     const saveContact = this.contactService.saveContact(value);
     const emailContact = this.contactService.emailContact(emailMessage);

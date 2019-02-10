@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
+import { ToastrModule } from './toastr/toastr.module';
 import { HomeModule } from './home/home.module';
 import { AppRoutingModule, routedComponents } from './app-routing.module';
 
@@ -14,6 +15,7 @@ import { AppRoutingModule, routedComponents } from './app-routing.module';
     HttpClientModule,
     NgbModule.forRoot(),
     CoreModule,
+    ToastrModule,
     HomeModule,
     AppRoutingModule
   ],

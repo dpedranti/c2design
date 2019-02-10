@@ -6,6 +6,7 @@ import states from 'datasets-us-states-names';
 import countries from 'country-list';
 import { IContact } from '../contact';
 import { ContactService } from '../contact.service';
+import { ToastrService } from '../../toastr/toastr.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -37,7 +38,10 @@ export class ContactFormComponent {
     recaptcha: new FormControl('', [Validators.required])
   });
 
-  constructor(private contactService: ContactService) {}
+  constructor(
+    private contactService: ContactService,
+    private toastrService: ToastrService
+  ) {}
 
   get name() {
     return this.contactForm.get('name');
@@ -94,14 +98,21 @@ export class ContactFormComponent {
       name: 'C2 Design',
       html: keys.map(k => `<p>${k}: ${value[k]}</p>`).join(' ')
     };
-    const saveContact = this.contactService.saveContact(value);
-    const emailContact = this.contactService.emailContact(emailMessage);
+    const saveContact = this.contactService.saveContact(null);
+    const emailContact = this.contactService.emailContact(null);
     forkJoin([saveContact, emailContact]).subscribe(
       response => {
         this.contact = response[0];
         this.submitted = true;
+        this.toastrService.success({
+          title: 'Success!',
+          message: 'We received your form submission and will be in touch soon.'
+        });
       },
       (err: any) => {
+        this.toastrService.error({
+          message: 'There was an error submitting your form. Please try again.'
+        });
         console.error(err);
       }
     );

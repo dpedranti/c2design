@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ToastrType } from './toastr.enum';
 import { IToastr } from './toastr';
 import { ToastrService } from './toastr.service';
@@ -8,8 +8,10 @@ import { ToastrService } from './toastr.service';
   templateUrl: './toastr.component.html',
   styleUrls: ['./toastr.component.scss']
 })
-export class ToastrComponent implements OnInit {
+export class ToastrComponent implements OnInit, OnDestroy {
   toastrs: IToastr[] = [];
+
+  private interval;
 
   constructor(private toastrService: ToastrService) {}
 
@@ -20,7 +22,12 @@ export class ToastrComponent implements OnInit {
         return;
       }
       this.toastrs.push(toastr);
+      this.interval = setTimeout(() => this.removeToastr(toastr), 8000);
     });
+  }
+
+  ngOnDestroy() {
+    clearTimeout(this.interval);
   }
 
   removeToastr(toastr: IToastr) {

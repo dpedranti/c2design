@@ -98,8 +98,8 @@ export class ContactFormComponent {
       name: 'C2 Design',
       html: keys.map(k => `<p>${k}: ${value[k]}</p>`).join(' ')
     };
-    const saveContact = this.contactService.saveContact(null);
-    const emailContact = this.contactService.emailContact(null);
+    const saveContact = this.contactService.saveContact(value);
+    const emailContact = this.contactService.emailContact(emailMessage);
     forkJoin([saveContact, emailContact]).subscribe(
       response => {
         this.contact = response[0];

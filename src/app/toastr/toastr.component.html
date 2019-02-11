@@ -1,7 +1,7 @@
 <div class="toastr-container">
   <div
     *ngFor="let toastr of toastrs"
-    class="{{ cssClass(toastr) }} alert-dismissable toastr"
+    class="{{ cssClass(toastr) }} shadow alert-dismissable toastr"
   >
     <a class="close" (click)="removeToastr(toastr)">&times;</a>
     <h3 *ngIf="toastr.title">{{ toastr.title }}</h3>

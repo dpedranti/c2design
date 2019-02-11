@@ -1,7 +1,7 @@
 @import '../../variables';
 
 .toastr {
-  margin-bottom: (10rem / 16);
+  margin-bottom: (20rem / 16);
 
   &-container {
     position: fixed;
@@ -21,7 +21,8 @@
   }
 
   h3 {
-    font-size: 1rem;
+    margin-bottom: (10rem / 16);
+    font-size: (18rem / 16);
     font-weight: 700;
   }
 

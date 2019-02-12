@@ -105,8 +105,10 @@ export class ContactFormComponent {
         this.contact = response[0];
         this.submitted = true;
         this.toastrService.success({
-          title: 'Success!',
-          message: 'We received your form submission and will be in touch soon.'
+          title: 'Thank You!',
+          message:
+            'We received your form submission and will be in touch soon.',
+          timeout: 5000
         });
       },
       (err: any) => {

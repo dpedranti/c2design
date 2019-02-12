@@ -27,30 +27,69 @@ export class ToastrService {
     return this.subject.asObservable();
   }
 
-  success({ title = null, message, keepAfterRouteChange = false }) {
-    this.toastr(ToastrType.Success, title, message, keepAfterRouteChange);
+  success({
+    message,
+    title = null,
+    timeout = null,
+    keepAfterRouteChange = false
+  }) {
+    this.toastr(
+      ToastrType.Success,
+      message,
+      title,
+      timeout,
+      keepAfterRouteChange
+    );
   }
 
-  error({ title = null, message, keepAfterRouteChange = false }) {
-    this.toastr(ToastrType.Error, title, message, keepAfterRouteChange);
+  error({
+    message,
+    title = null,
+    timeout = null,
+    keepAfterRouteChange = false
+  }) {
+    this.toastr(
+      ToastrType.Error,
+      message,
+      title,
+      timeout,
+      keepAfterRouteChange
+    );
   }
 
-  info({ title = null, message, keepAfterRouteChange = false }) {
-    this.toastr(ToastrType.Info, title, message, keepAfterRouteChange);
+  info({
+    message,
+    title = null,
+    timeout = null,
+    keepAfterRouteChange = false
+  }) {
+    this.toastr(ToastrType.Info, message, title, timeout, keepAfterRouteChange);
   }
 
-  warn({ title = null, message, keepAfterRouteChange = false }) {
-    this.toastr(ToastrType.Warning, title, message, keepAfterRouteChange);
+  warn({
+    message,
+    title = null,
+    timeout = null,
+    keepAfterRouteChange = false
+  }) {
+    this.toastr(
+      ToastrType.Warning,
+      message,
+      title,
+      timeout,
+      keepAfterRouteChange
+    );
   }
 
   toastr(
     type: ToastrType,
-    title: string,
     message: string,
+    title?: string,
+    timeout?: number,
     keepAfterRouteChange = false
   ) {
     this.keepAfterRouteChange = keepAfterRouteChange;
-    this.subject.next(<IToastr>{ type, title, message });
+    this.subject.next(<IToastr>{ type, title, message, timeout });
   }
 
   clear() {

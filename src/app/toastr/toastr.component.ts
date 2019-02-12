@@ -22,7 +22,11 @@ export class ToastrComponent implements OnInit, OnDestroy {
         return;
       }
       this.toastrs.push(toastr);
-      this.interval = setTimeout(() => this.removeToastr(toastr), 8000);
+
+      const { timeout } = toastr;
+      if (timeout) {
+        this.interval = setTimeout(() => this.removeToastr(toastr), timeout);
+      }
     });
   }
 

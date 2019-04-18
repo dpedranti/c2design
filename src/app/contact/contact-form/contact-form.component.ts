@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Observable, forkJoin } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { omit } from 'lodash';
 import states from 'datasets-us-states-names';
 import countries from 'country-list';
 import { IContact } from '../contact';
@@ -16,9 +17,7 @@ import { ToastrService } from '../../toastr/toastr.service';
 export class ContactFormComponent {
   private countryNames = countries().getNames();
   private stateNames = states;
-  public readonly siteKey = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
 
-  submitted = false;
   contact: IContact[] | undefined;
 
   contactForm = new FormGroup({
@@ -91,24 +90,15 @@ export class ContactFormComponent {
 
   onSubmit() {
     const { value } = this.contactForm;
-    const keys = Object.keys(value).filter(k => k !== 'recaptcha');
-    const emailMessage = {
-      to: 'derrick@c2designstudio.com', // TODO: Get from config
-      subject: 'C2 Design Contact Form Submission',
-      name: 'C2 Design',
-      html: keys.map(k => `<p>${k}: ${value[k]}</p>`).join(' ')
-    };
-    const saveContact = this.contactService.saveContact(value);
-    const emailContact = this.contactService.emailContact(emailMessage);
-    forkJoin([saveContact, emailContact]).subscribe(
-      response => {
-        this.contact = response[0];
-        this.submitted = true;
+    const emailMessage = omit(value, ['recaptcha']);
+    this.contactService.emailContact(emailMessage).subscribe(
+      () => {
+        this.contactForm.reset();
         this.toastrService.success({
           title: 'Thank You!',
           message:
             'We received your form submission and will be in touch soon.',
-          timeout: 5000
+          timeout: 8000
         });
       },
       (err: any) => {

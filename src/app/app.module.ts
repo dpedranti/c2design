@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ToastrModule } from './toastr/toastr.module';
 import { HomeModule } from './home/home.module';
 import { AppRoutingModule, routedComponents } from './app-routing.module';
+import { environment } from '../environments/environment.prod';
 
 @NgModule({
   declarations: [AppComponent, routedComponents],
@@ -19,7 +20,7 @@ import { AppRoutingModule, routedComponents } from './app-routing.module';
     HomeModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{ provide: 'CONTACT_API', useValue: environment.contactApi }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

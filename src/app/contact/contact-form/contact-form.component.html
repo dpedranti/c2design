@@ -1,4 +1,4 @@
-<div class="contact-form" *ngIf="!submitted">
+<div class="contact-form">
   <p class="small">
     Fields marked with an asterisk (<span class="text-red">*</span>) are
     required.
@@ -167,54 +167,4 @@
       </div>
     </div>
   </form>
-</div>
-
-<div *ngIf="submitted">
-  <h3>Thank You!</h3>
-  <p>We received your form submission and will be in touch soon.</p>
-  <div class="contact-submission-data">
-    <div class="row">
-      <div class="col-sm-6">Name:</div>
-      <div class="col-sm-6">{{ contact.name }}</div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">Company/Organization:</div>
-      <div class="col-sm-6">{{ contact.company }}</div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">Email:</div>
-      <div class="col-sm-6">{{ contact.email }}</div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">Address:</div>
-      <div class="col-sm-6">{{ contact.address }}</div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">City:</div>
-      <div class="col-sm-6">{{ contact.city }}</div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">State/Province:</div>
-      <div class="col-sm-6">{{ contact.state }}</div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">Zip/Postal Code:</div>
-      <div class="col-sm-6">{{ contact.zip }}</div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">Country:</div>
-      <div class="col-sm-6">{{ contact.country }}</div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">Comments/Questions:</div>
-      <div class="col-sm-6">{{ contact.comments }}</div>
-    </div>
-  </div>
-  <div class="row btn-row">
-    <div class="col-sm-12">
-      <button class="btn btn-default btn-lg" (click)="submitted = false">
-        Back
-      </button>
-    </div>
-  </div>
 </div>

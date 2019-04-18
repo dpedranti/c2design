@@ -1,5 +1,9 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Injectable, Inject } from '@angular/core';
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpHeaders
+} from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { IContact } from './contact';
@@ -8,28 +12,16 @@ import { IContact } from './contact';
   providedIn: 'root'
 })
 export class ContactService {
-  // TODO: Get these from config
-  private contactsUrl = 'http://localhost:8080/api/contacts';
-  private emailUrl = 'http://localhost:8080/api/send-email';
-
-  constructor(private http: HttpClient) {}
-
-  getContact(id: number): Observable<IContact[]> {
-    return this.http.get<IContact[]>(`${this.contactsUrl}/${id}`).pipe(
-      tap(data => console.log('Get contact:', JSON.stringify(data))),
-      catchError(this.handleError)
-    );
-  }
-
-  saveContact(body: object): Observable<IContact[]> {
-    return this.http.post<IContact[]>(this.contactsUrl, body).pipe(
-      tap(data => console.log('Save contact:', JSON.stringify(data))),
-      catchError(this.handleError)
-    );
-  }
+  constructor(
+    private http: HttpClient,
+    @Inject('CONTACT_API') private contactApi: string
+  ) {}
 
   emailContact(body: object): Observable<IContact[]> {
-    return this.http.post<IContact[]>(this.emailUrl, body).pipe(
+    const options = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    };
+    return this.http.post<IContact[]>(this.contactApi, body, options).pipe(
       tap(data => console.log('Email contact:', JSON.stringify(data))),
       catchError(this.handleError)
     );

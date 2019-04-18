@@ -6,10 +6,9 @@ import {
   ContactRoutingModule,
   routedComponents
 } from './contact-routing.module';
-import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   imports: [ContactRoutingModule, SharedModule, NgbModule],
-  declarations: [routedComponents, ContactFormComponent]
+  declarations: [routedComponents]
 })
 export class ContactModule {}

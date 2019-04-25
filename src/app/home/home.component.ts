@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        'Orange County web and mobile development, online marketing and graphic design services from C2 Design Studio.'
+        'Orange County web / mobile development, online marketing and graphic design services from C2 Design Studio and Derrick Pedranti.'
     });
     /* tslint:enable:max-line-length */
   }

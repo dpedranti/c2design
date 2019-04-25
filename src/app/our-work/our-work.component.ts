@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { uniqueId } from 'lodash';
 import { WEB, MARKETING, DIGITAL_SIGNAGE } from './portfolio-items';
@@ -18,7 +19,22 @@ export class OurWorkComponent implements OnInit {
   marketing = MARKETING;
   digitalSignage = DIGITAL_SIGNAGE;
 
-  constructor(private modalService: NgbModal) {}
+  constructor(
+    private title: Title,
+    private meta: Meta,
+    private modalService: NgbModal
+  ) {
+    this.title.setTitle(
+      'User-centered Design and Web Development - C2 Design Studio'
+    );
+    /* tslint:disable:max-line-length */
+    this.meta.addTag({
+      name: 'description',
+      content:
+        'User-centered web, online marketing and digital graphic design work from C2 Design Studio.'
+    });
+    /* tslint:enable:max-line-length */
+  }
 
   openModal(content, portfolioItem) {
     this.modalService.open(content, { size: 'lg' });

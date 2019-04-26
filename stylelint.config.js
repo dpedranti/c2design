@@ -6,6 +6,7 @@ module.exports = {
       {
         ignoreAtRules: ['for', 'if', 'else', 'include', 'mixin']
       }
-    ]
+    ],
+    'no-descending-specificity': null
   }
 };

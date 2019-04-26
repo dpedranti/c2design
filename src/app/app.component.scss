@@ -283,10 +283,6 @@ label {
 
 // Modals
 
-.modal-content {
-  border: none;
-}
-
 .modal-header {
   border-bottom: none;
   color: #fff;
@@ -308,6 +304,7 @@ label {
 
 .modal-content {
   padding: 1rem;
+  border: none;
 
   .align-middle {
     margin-top: auto;

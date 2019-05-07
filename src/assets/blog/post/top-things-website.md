@@ -2,7 +2,7 @@
 
 Posted in [blog](/blog) by Derrick Pedranti.
 
-#### A Good Content Management System
+#### A Good Content Management System (CMS)
 
 There are some great commercial ones but also excellent non-commercial, free of charge CMS's. WordPress, Joomla and Drupal are good options to consider. A good CMS will allow those who are not web designers/developers to update website content. And it will make the website more extensible since there are thousands of available extensions and plug-ins such as forms, slideshows, dropdowns, RSS feed integration, social web integration, etc.
 

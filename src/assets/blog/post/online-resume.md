@@ -10,4 +10,4 @@ If appropriate include a page with some portfolio samples. Lastly make sure to i
 
 Online resumes are great for job seekers and also for individuals seeking new clients and business.
 
-Check out mine: [Derrick Pedranti](http://www.derrickpedranti.org/)
+Check out mine: <a href="http://www.derrickpedranti.org/" target="_blank">Derrick Pedranti</a>

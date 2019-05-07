@@ -15,7 +15,7 @@ export class BlogComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        'Web and mobile design, online marketing, digital design and user experience insights from C2 Design Studio.'
+        'Web and mobile design, online marketing, digital design and user experience insights from Derrick Pedranti and C2 Design Studio.'
     });
     /* tslint:enable:max-line-length */
   }

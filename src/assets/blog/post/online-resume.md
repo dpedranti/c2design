@@ -1,5 +1,7 @@
 ### Separate Yourself From The Competition With An Online Resume
 
+Posted in [blog](/blog) by Derrick Pedranti.
+
 Consider putting your resume online. It's a great place to showcase your talent through content, photos, multimedia and interactivity.
 
 Including a video is a great way to reflect your personality and make a personal appeal. Just upload it to YouTube or Vimeo and embed it on your site.

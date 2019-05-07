@@ -4,7 +4,7 @@ import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { omit } from 'lodash';
 import states from 'datasets-us-states-names';
-import countries from 'country-list';
+import { getNames as getCountries } from 'country-list';
 import { IContact } from '../contact';
 import { ContactService } from '../contact.service';
 import { ToastrService } from '../../toastr/toastr.service';
@@ -15,7 +15,7 @@ import { ToastrService } from '../../toastr/toastr.service';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent {
-  private countryNames = countries().getNames();
+  private countryNames = getCountries();
   private stateNames = states;
 
   contact: IContact[] | undefined;

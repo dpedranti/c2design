@@ -1,5 +1,7 @@
 ### Some Helpful Tips for Playing Flash Animations in PowerPoint
 
+Posted in [blog](/blog) by Derrick Pedranti.
+
 1.  [Check out this article](https://support.office.com/en-ie/article/play-an-adobe-macromedia-flash-animation-in-a-presentation-3b681b8e-6ca9-413f-b41a-eb748babc588) for help with embedding Flash animations in PowerPoint.
 2.  Use a PC (not a Mac) computer. Embedded Flash animations will not work on a Mac.
 3.  Use the keyboard to transition from one slide to the next (i.e., press the space bar or forward arrow key). Do not use the mouse as it can possibly cause problems with the animation.

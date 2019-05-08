@@ -5,7 +5,7 @@ import { BlogComponent } from './blog.component';
 
 const routes: Routes = [
   { path: '', component: BlogComponent },
-  { path: 'post', loadChildren: 'app/blog/post/post.module#PostModule' }
+  { path: ':id', loadChildren: 'app/blog/post/post.module#PostModule' }
 ];
 
 @NgModule({

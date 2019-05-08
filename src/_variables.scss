@@ -23,6 +23,10 @@ $gray-warm-dark: #494440 !default;
 
 $gray-800: $gray-darker !default;
 
+$theme-colors: (
+  'red': $red
+);
+
 // Options
 
 $enable-rounded: false !default;
@@ -30,6 +34,10 @@ $enable-rounded: false !default;
 // Spacing
 
 $spacer: 1rem !default;
+
+// Paragraphs
+
+$paragraph-margin-bottom: 2rem !default;
 
 // Components
 
@@ -51,6 +59,7 @@ $hr-margin-y: 1.125rem !default;
 
 // Buttons
 
+$btn-border-width: 0 !default;
 $btn-box-shadow: 1px 1px 7px 0 rgba($black, 0.23) !default;
 
 // Forms

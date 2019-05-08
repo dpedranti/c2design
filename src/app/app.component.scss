@@ -48,21 +48,13 @@ h3 {
   }
 }
 
-p {
-  margin-bottom: 2rem;
-}
-
 .text-lg {
   font-size: 1.25rem;
 }
 
-.text-red {
-  color: $red;
-}
-
 // Layout
 
-#main {
+.main {
   section {
     > .container {
       padding: 3.75rem 30px;
@@ -102,8 +94,6 @@ p {
 .jumbotron {
   position: relative;
   padding-left: 2rem;
-
-  border-radius: 0;
   border-left: 1px solid #fff;
   font-size: 1.5rem;
   font-weight: 300;
@@ -234,7 +224,6 @@ p {
 // Buttons
 
 .btn {
-  border: none;
   border-radius: 0.3rem;
   transition: background-color 0.2s ease-in-out;
 
@@ -381,19 +370,6 @@ label {
   }
 }
 
-// Utilities
-
-.v-center {
-  display: table;
-  height: 100%;
-  width: 100%;
-}
-
-.v-content {
-  display: table-cell;
-  vertical-align: middle;
-}
-
 // Accordion
 
 .accordion {
@@ -473,7 +449,7 @@ label {
 
 // Reponsive
 
-@media (max-width: 575px) {
+@include media-breakpoint-down(xs) {
   .jumbotron {
     padding: 0;
     border-left: none;
@@ -488,7 +464,7 @@ label {
   }
 }
 
-@media (max-width: 479px) {
+@include media-breakpoint-down(xs) {
   .accordion {
     .card {
       .card-header {

@@ -5,7 +5,7 @@
 // Home Page
 // --------------------------------------------------
 
-#uvp {
+.uvp {
   position: relative;
   z-index: 0;
   background: transparent url('../../assets/images/fea-c2design-studio.jpg')
@@ -32,7 +32,7 @@
   }
 }
 
-#who-we-are {
+.who-we-are {
   min-height: 400px;
   background: darken(theme-color('primary'), 2%)
     url('../../assets/images/bg-who-we-are.svg') no-repeat right bottom;
@@ -43,7 +43,7 @@
   text-align: center;
 }
 
-#our-services {
+.our-services {
   text-align: center;
 
   h3 {
@@ -87,13 +87,13 @@
     }
   }
 
-  #btn-services {
+  .btn-services {
     margin-top: 1rem;
   }
 }
 
-#get-in-touch {
-  background-color: $gray-dark;
+.get-in-touch {
+  background-color: $gray-800;
   color: #fff;
 
   .contact-info {
@@ -113,11 +113,11 @@
 
   .icon-circle-solid {
     background-color: #fff;
-    color: $gray-dark;
+    color: $gray-800;
 
     &:hover,
     &:focus {
-      background-color: lighten($gray-light, 5%);
+      background-color: lighten($gray-500, 5%);
     }
   }
 }
@@ -125,7 +125,7 @@
 // Responsive
 
 @media (min-width: 768px) and (max-width: 991px) {
-  #get-in-touch {
+  .get-in-touch {
     .icon-ul {
       li {
         display: block;
@@ -136,17 +136,17 @@
 }
 
 @media (max-width: 767px) {
-  #uvp {
+  .uvp {
     > .container > .row {
       min-height: 560px;
     }
   }
 
-  #who-we-are {
+  .who-we-are {
     background: darken(theme-color('primary'), 2%);
   }
 
-  #our-services {
+  .our-services {
     h3 {
       font-size: 2rem;
     }
@@ -167,7 +167,7 @@
 }
 
 @media (max-width: 767px) {
-  #get-in-touch {
+  .get-in-touch {
     .contact-info {
       margin: 2rem 0 3rem 0;
     }

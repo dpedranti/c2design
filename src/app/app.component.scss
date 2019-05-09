@@ -158,7 +158,7 @@ h3 {
   height: 110px;
   width: 110px;
   border-radius: 50%;
-  border: 3px solid $gray-lighter;
+  border: 3px solid $gray-300;
   text-align: center;
 }
 
@@ -167,58 +167,10 @@ h3 {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background-color: $gray-lighter;
+  background-color: $gray-300;
   font-size: 34px;
   text-align: center;
   transition: all 0.2s ease-in-out;
-}
-
-.icon-link {
-  color: $gray-dark;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-
-    .icon-circle {
-      background-color: $gray-lighter;
-      transition: background-color 0.2s linear;
-
-      &.anchor-down:before {
-        content: '\f35d' !important;
-        background-image: none !important;
-        @include icon-font();
-        font-size: 48px;
-        line-height: 110px;
-        text-align: center;
-      }
-    }
-  }
-
-  .icon-circle {
-    margin-bottom: 5px;
-  }
-}
-
-.icon-menu-horizontal {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0 -30px 2rem -30px;
-  list-style: none;
-
-  li {
-    margin: 0 30px 1rem 30px;
-    font-size: 21px;
-    font-style: italic;
-    text-align: center;
-
-    .icon-circle {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
 }
 
 // Buttons
@@ -230,30 +182,6 @@ h3 {
   &:active {
     position: relative;
     top: 1px;
-  }
-}
-
-.btn-primary {
-  background-color: $gray-dark;
-
-  &:hover,
-  &:focus {
-    background-color: darken($gray-dark, 10%);
-  }
-}
-
-.btn-default {
-  background-color: $gray-lighter;
-}
-
-.btn-white {
-  background-color: #fff;
-  color: $gray-dark;
-
-  &:hover,
-  &:focus {
-    background-color: lighten($gray-light, 5%);
-    color: $gray-darker;
   }
 }
 
@@ -285,7 +213,7 @@ label {
 
   .close {
     padding: 0;
-    color: $gray-lighter !important;
+    color: $gray-300 !important;
     font-size: 2.375rem;
     text-shadow: none;
     opacity: 1;
@@ -315,7 +243,7 @@ label {
   min-height: 66px;
   border: none;
   padding: 20px 15px 15px 60px;
-  color: $gray-dark;
+  color: $gray-800;
 
   &:before {
     content: '';
@@ -383,7 +311,7 @@ label {
     .card-header {
       position: relative;
       padding: 0;
-      background-color: $gray-dark;
+      background-color: $gray-800;
       border-bottom: none;
       color: #fff;
       font-size: 24px;
@@ -412,7 +340,7 @@ label {
 
         &:hover,
         &:focus {
-          background-color: $gray-darker;
+          background-color: $gray-900;
           text-decoration: none;
         }
 

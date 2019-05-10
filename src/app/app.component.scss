@@ -48,10 +48,6 @@ h3 {
   }
 }
 
-.text-lg {
-  font-size: 1.25rem;
-}
-
 // Layout
 
 .main {
@@ -121,30 +117,6 @@ h3 {
 
 // Icons
 
-.icon-ul {
-  margin-left: -2px;
-  padding-left: 0;
-  list-style: none;
-
-  li {
-    &:not(:first-child) {
-      margin-top: 0.75rem;
-    }
-  }
-
-  &.icon-ul-inline {
-    li {
-      margin-top: 0;
-
-      &:not(:first-child) {
-        margin-left: 1rem;
-      }
-
-      display: inline-block;
-    }
-  }
-}
-
 .icon-inline {
   display: inline-block;
   margin: -2px 8px 0 0;
@@ -162,17 +134,6 @@ h3 {
   text-align: center;
 }
 
-.icon-circle-solid {
-  display: block;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: $gray-300;
-  font-size: 34px;
-  text-align: center;
-  transition: all 0.2s ease-in-out;
-}
-
 // Buttons
 
 .btn {
@@ -182,26 +143,6 @@ h3 {
   &:active {
     position: relative;
     top: 1px;
-  }
-}
-
-// Forms
-
-label {
-  margin-bottom: 0.125rem;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.form-control-lg {
-  font-size: 1.125rem;
-}
-
-.btn-row {
-  margin-top: 1rem;
-
-  .btn:not(:first-child) {
-    margin-left: 1rem;
   }
 }
 

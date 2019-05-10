@@ -110,30 +110,9 @@
   a:not(.btn-white) {
     color: #fff;
   }
-
-  .icon-circle-solid {
-    background-color: #fff;
-    color: $gray-800;
-
-    &:hover,
-    &:focus {
-      background-color: lighten($gray-500, 5%);
-    }
-  }
 }
 
 // Responsive
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .get-in-touch {
-    .icon-ul {
-      li {
-        display: block;
-        margin: 0 0 15px 0;
-      }
-    }
-  }
-}
 
 @media (max-width: 767px) {
   .uvp {

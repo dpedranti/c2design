@@ -60,15 +60,50 @@
 
   .social-media-links {
     margin-bottom: 1.125rem;
+  }
+}
 
-    .icon-circle-solid {
-      background-color: $gray-warm-dark;
-      color: #fff;
+.icon-ul {
+  margin-left: -2px;
+  padding-left: 0;
+  list-style: none;
 
-      &:hover,
-      &:focus {
-        background-color: lighten($gray-warm-dark, 30%);
-      }
+  li {
+    &:not(:first-child) {
+      margin-top: 0.75rem;
     }
   }
+
+  &.icon-ul-inline {
+    li {
+      margin-top: 0;
+
+      &:not(:first-child) {
+        margin-left: 1rem;
+      }
+
+      display: inline-block;
+    }
+  }
+}
+
+.icon-circle-solid {
+  display: block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: $gray-warm-dark;
+  color: $white;
+  font-size: 34px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($gray-warm-dark, 30%);
+  }
+}
+
+.text-lg {
+  font-size: 1.25rem;
 }

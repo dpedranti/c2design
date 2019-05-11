@@ -1,18 +1,12 @@
 @import 'variables';
 @import '../../assets/scss/mixins';
 
-//
-// Our Work Page
-// --------------------------------------------------
-
 .our-work {
-  position: relative;
   z-index: 0;
   background: transparent
     url('../../assets/images/fea-c2design-studio-work.jpg') no-repeat left
     center;
   background-size: cover;
-  color: #fff;
 
   &:before {
     content: '';
@@ -20,29 +14,22 @@
     z-index: -1;
     height: 100%;
     width: 100%;
-    background-color: rgba(theme-color('primary'), 0.5);
+    background-color: rgba($blue, 0.5);
   }
 
-  > .container > .row {
-    min-height: 300px;
-
-    > div {
-      display: flex;
-      align-items: center;
-    }
+  .row {
+    min-height: (300rem / 16);
   }
+}
 
-  .jumbotron.icon-page:before {
-    background-position: 0 0;
-  }
+.jumbotron.icon-page:before {
+  background-position: 0 0;
 }
 
 .user-centered-design {
   background-color: $green;
-  color: #fff;
   font-size: 1.5rem;
   font-weight: 300;
-  text-align: center;
 }
 
 .work-samples {
@@ -58,18 +45,18 @@
     &:before {
       content: '';
       position: absolute;
-      top: -13px;
+      top: (-13rem / 16);
       left: 0;
       display: block;
-      height: 75px;
-      width: 90px;
+      height: (75rem / 16);
+      width: (90rem / 16);
       background-position: center center;
       background-repeat: no-repeat;
     }
 
     &.heading-web:before {
       @include background-image(icon-tablet-green, true, '../../assets/images');
-      background-size: auto 75px;
+      background-size: auto (75rem / 16);
     }
 
     &.heading-online-marketing:before {
@@ -78,7 +65,7 @@
         true,
         '../../assets/images'
       );
-      background-size: 75px auto;
+      background-size: (75rem / 16) auto;
     }
 
     &.heading-digital-design:before {
@@ -87,35 +74,35 @@
         true,
         '../../assets/images'
       );
-      background-size: 90px auto;
+      background-size: (90rem / 16) auto;
     }
   }
 
   .card {
     border: none;
-    margin-bottom: 30px;
+    margin-bottom: (30rem / 16);
   }
 
   .card-body {
     padding: 0;
 
-    button {
+    .btn {
       position: relative;
-      max-height: 475px;
+      max-height: (475rem / 16);
       padding: 0;
       border-radius: 0;
       overflow: hidden;
 
-      @media (min-width: 992px) and (max-width: 1199px) {
-        max-height: 350px;
+      @include media-breakpoint-only(lg) {
+        max-height: (350rem / 16);
       }
 
-      @media (min-width: 768px) and (max-width: 991px) {
-        max-height: 300px;
+      @include media-breakpoint-only(md) {
+        max-height: (300rem / 16);
       }
 
-      @media (min-width: 576px) and (max-width: 767px) {
-        max-height: 250px;
+      @include media-breakpoint-only(sm) {
+        max-height: (250rem / 16);
       }
 
       &:before {
@@ -151,12 +138,12 @@
         &:before {
           content: '\f2f5';
           position: relative;
-          top: -40px;
+          top: (-40rem / 16);
           display: block;
           margin-top: 50%;
           @include icon-font();
           color: #fff;
-          font-size: 80px;
+          font-size: (80rem / 16);
         }
       }
     }

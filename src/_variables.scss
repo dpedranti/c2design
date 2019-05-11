@@ -97,12 +97,15 @@ $jumbotron-bg: transparent;
 
 $modal-inner-padding: 0;
 $modal-content-bg: transparent;
+$modal-content-border-width: 0;
 $modal-backdrop-opacity: 0.8;
+$modal-header-border-width: 0;
 $modal-header-padding: 1rem 0;
 
 // Alerts
 
 $alert-margin-bottom: 2rem;
+$alert-border-width: 0;
 
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';

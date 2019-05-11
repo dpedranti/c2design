@@ -7,7 +7,7 @@ $ionicons-font-path: '../../node_modules/ionicons-npm/fonts';
 //
 // Application-wide styles
 // --------------------------------------------------
-
+//
 // Table of Contents
 //
 
@@ -17,10 +17,9 @@ $ionicons-font-path: '../../node_modules/ionicons-npm/fonts';
 // Icons
 // Buttons
 // Forms
+// Modals
 // Alerts
-// Utilities
 // Accordion
-// Responsive
 
 html {
   position: relative;
@@ -56,32 +55,30 @@ h3 {
       padding: 3.75rem 30px;
     }
 
-    h2 {
-      margin-bottom: 2.25rem;
-      font-weight: 300;
-      text-align: center;
-      text-transform: uppercase;
-
-      &.separator {
-        &:after {
-          content: '';
-          display: block;
-          height: 8px;
-          width: 160px;
-          margin: 1.5rem auto 0 auto;
-          @include background-image(header-separator);
-          background-size: 160px 8px;
-        }
-
-        &.white:after {
-          @include background-image(header-separator-white);
-        }
-      }
-    }
-
     p:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+.separator {
+  margin-bottom: 2.25rem;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 8px;
+    width: 160px;
+    margin: 1.5rem auto 0 auto;
+    @include background-image(header-separator);
+    background-size: 160px 8px;
+  }
+
+  &.white:after {
+    @include background-image(header-separator-white);
   }
 }
 
@@ -90,9 +87,14 @@ h3 {
 .jumbotron {
   position: relative;
   padding-left: 2rem;
-  border-left: 1px solid #fff;
+  border-left: 1px solid $white;
   font-size: 1.5rem;
   font-weight: 300;
+
+  @include media-breakpoint-down(xs) {
+    padding: 0;
+    border-left: none;
+  }
 
   &.icon-page {
     margin-left: 130px;
@@ -107,6 +109,14 @@ h3 {
       @include background-image(sprite-icon-page);
       background-repeat: no-repeat;
       background-size: 120px auto;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-left: 0;
+
+      &:before {
+        content: none;
+      }
     }
   }
 
@@ -149,12 +159,12 @@ h3 {
 // Modals
 
 .modal-header {
-  border-bottom: none;
-  color: #fff;
+  align-items: center;
+  color: $white;
 
   .close {
     padding: 0;
-    color: $gray-300 !important;
+    color: $gray-300;
     font-size: 2.375rem;
     text-shadow: none;
     opacity: 1;
@@ -163,18 +173,12 @@ h3 {
 }
 
 .modal-body {
-  background-color: #fff;
+  background-color: $white;
   box-shadow: 1px 1px 9px 0 rgba($black, 0.33);
 }
 
 .modal-content {
   padding: 1rem;
-  border: none;
-
-  .align-middle {
-    margin-top: auto;
-    margin-bottom: auto;
-  }
 }
 
 // Alerts
@@ -182,20 +186,19 @@ h3 {
 .alert {
   position: relative;
   min-height: 66px;
-  border: none;
-  padding: 20px 15px 15px 60px;
+  padding: (20rem / 16) (15rem / 16) (15rem / 16) (60rem / 16);
   color: $gray-800;
 
   &:before {
     content: '';
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: (15rem / 16);
+    left: (15rem / 16);
     display: block;
-    height: 36px;
-    width: 36px;
+    height: (36rem / 16);
+    width: (36rem / 16);
     @include icon-font();
-    font-size: 36px;
+    font-size: (36rem / 16);
   }
 
   &.alert-success {
@@ -254,19 +257,23 @@ h3 {
       padding: 0;
       background-color: $gray-800;
       border-bottom: none;
-      color: #fff;
-      font-size: 24px;
+      color: $white;
+      font-size: (24rem / 16);
       font-style: italic;
 
-      button {
+      .btn {
         width: 100%;
         padding: 0.75rem 3.5rem 1rem 1.25rem;
-        color: #fff;
+        color: $white;
         font-size: 2rem;
         font-style: italic;
         line-height: 1;
         text-align: left;
         transition: background-color 0.2s ease-in-out;
+
+        @include media-breakpoint-down(xs) {
+          font-size: 1.625rem;
+        }
 
         &:after {
           content: '\f126';
@@ -311,35 +318,6 @@ h3 {
 
       > *:first-child {
         margin-top: 0;
-      }
-    }
-  }
-}
-
-// Reponsive
-
-@include media-breakpoint-down(xs) {
-  .jumbotron {
-    padding: 0;
-    border-left: none;
-
-    &.icon-page {
-      margin-left: 0;
-
-      &:before {
-        content: none;
-      }
-    }
-  }
-}
-
-@include media-breakpoint-down(xs) {
-  .accordion {
-    .card {
-      .card-header {
-        button {
-          font-size: 1.625rem;
-        }
       }
     }
   }

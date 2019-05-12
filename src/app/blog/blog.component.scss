@@ -1,18 +1,12 @@
 @import 'variables';
 @import '../../assets/scss/mixins';
 
-//
-// Blog
-// --------------------------------------------------
-
 .blog {
-  position: relative;
   z-index: 0;
   background: transparent
     url('../../assets/images/fea-c2design-studio-blog.jpg') no-repeat left
     center;
   background-size: cover;
-  color: #fff;
 
   &:before {
     content: '';
@@ -23,13 +17,8 @@
     background-color: rgba($gray-warm-dark, 0.5);
   }
 
-  > .container > .row {
-    min-height: 300px;
-
-    > div {
-      display: flex;
-      align-items: center;
-    }
+  .row {
+    min-height: (300rem / 16);
   }
 
   .jumbotron.icon-page:before {

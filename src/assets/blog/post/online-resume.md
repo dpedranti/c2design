@@ -9,5 +9,3 @@ Including a video is a great way to reflect your personality and make a personal
 If appropriate include a page with some portfolio samples. Lastly make sure to include relevant links to your social media profiles such as LinkedIn.
 
 Online resumes are great for job seekers and also for individuals seeking new clients and business.
-
-Check out mine: <a href="http://www.derrickpedranti.org/" target="_blank">Derrick Pedranti</a>

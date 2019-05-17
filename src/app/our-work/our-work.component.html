@@ -11,7 +11,7 @@
     </button>
   </div>
   <div class="modal-body">
-    <div *ngIf="!!modalVideo; else: elseBlock">
+    <div *ngIf="!!modalVideo; else elseBlock">
       <app-videojs [idx]="modalIndex" [url]="modalVideo"></app-videojs>
     </div>
     <ng-template #elseBlock>
@@ -20,10 +20,10 @@
   </div>
 </ng-template>
 
-<section id="our-work">
+<section class="our-work position-relative text-white">
   <div class="container">
     <div class="row">
-      <div class="col-md-10 col-lg-8 mx-auto">
+      <div class="col-md-10 col-lg-8 d-flex align-items-center mx-auto">
         <div class="jumbotron icon-page">
           <h1>our work</h1>
           <p>
@@ -34,7 +34,7 @@
     </div>
   </div>
 </section>
-<section id="user-centered-design">
+<section class="user-centered-design text-white text-center">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 mx-auto">
@@ -50,14 +50,15 @@
           companies and government agencies.
         </p>
         <p>
-          Below are just a few examples of work by Derrick Pedranti. Please
-          contact us for additional samples.
+          Below are just a few examples of web, online marketing and digital
+          graphic design work by Derrick Pedranti. Please contact us for
+          additional samples.
         </p>
       </div>
     </div>
   </div>
 </section>
-<section id="work-samples">
+<section class="work-samples">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 mx-auto">

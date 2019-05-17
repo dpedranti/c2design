@@ -7,7 +7,7 @@ $ionicons-font-path: '../../node_modules/ionicons-npm/fonts';
 //
 // Application-wide styles
 // --------------------------------------------------
-
+//
 // Table of Contents
 //
 
@@ -17,10 +17,9 @@ $ionicons-font-path: '../../node_modules/ionicons-npm/fonts';
 // Icons
 // Buttons
 // Forms
+// Modals
 // Alerts
-// Utilities
 // Accordion
-// Responsive
 
 html {
   position: relative;
@@ -39,49 +38,21 @@ h1 {
 
 h3 {
   font-weight: 300;
-}
 
-p {
-  margin-bottom: 2rem;
-}
-
-.text-lg {
-  font-size: 1.25rem;
-}
-
-.text-red {
-  color: $red;
+  a {
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 // Layout
 
-#main {
+.main {
   section {
     > .container {
       padding: 3.75rem 30px;
-    }
-
-    h2 {
-      margin-bottom: 2.25rem;
-      font-weight: 300;
-      text-align: center;
-      text-transform: uppercase;
-
-      &.separator {
-        &:after {
-          content: '';
-          display: block;
-          height: 8px;
-          width: 160px;
-          margin: 1.5rem auto 0 auto;
-          @include background-image(header-separator);
-          background-size: 160px 8px;
-        }
-
-        &.white:after {
-          @include background-image(header-separator-white);
-        }
-      }
     }
 
     p:last-child {
@@ -90,16 +61,40 @@ p {
   }
 }
 
+.separator {
+  margin-bottom: 2.25rem;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 8px;
+    width: 160px;
+    margin: 1.5rem auto 0 auto;
+    @include background-image(header-separator);
+    background-size: 160px 8px;
+  }
+
+  &.white:after {
+    @include background-image(header-separator-white);
+  }
+}
+
 // Components
 
 .jumbotron {
   position: relative;
   padding-left: 2rem;
-
-  border-radius: 0;
-  border-left: 1px solid #fff;
+  border-left: 1px solid $white;
   font-size: 1.5rem;
   font-weight: 300;
+
+  @include media-breakpoint-down(xs) {
+    padding: 0;
+    border-left: none;
+  }
 
   &.icon-page {
     margin-left: 130px;
@@ -115,6 +110,14 @@ p {
       background-repeat: no-repeat;
       background-size: 120px auto;
     }
+
+    @include media-breakpoint-down(xs) {
+      margin-left: 0;
+
+      &:before {
+        content: none;
+      }
+    }
   }
 
   > *:last-child {
@@ -123,30 +126,6 @@ p {
 }
 
 // Icons
-
-.icon-ul {
-  margin-left: -2px;
-  padding-left: 0;
-  list-style: none;
-
-  li {
-    &:not(:first-child) {
-      margin-top: 0.75rem;
-    }
-  }
-
-  &.icon-ul-inline {
-    li {
-      margin-top: 0;
-
-      &:not(:first-child) {
-        margin-left: 1rem;
-      }
-
-      display: inline-block;
-    }
-  }
-}
 
 .icon-inline {
   display: inline-block;
@@ -161,73 +140,13 @@ p {
   height: 110px;
   width: 110px;
   border-radius: 50%;
-  border: 3px solid $gray-lighter;
+  border: 3px solid $gray-300;
   text-align: center;
-}
-
-.icon-circle-solid {
-  display: block;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: $gray-lighter;
-  font-size: 34px;
-  text-align: center;
-  transition: all 0.2s ease-in-out;
-}
-
-.icon-link {
-  color: $gray-dark;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-
-    .icon-circle {
-      background-color: $gray-lighter;
-      transition: background-color 0.2s linear;
-
-      &.anchor-down:before {
-        content: '\f35d' !important;
-        background-image: none !important;
-        @include icon-font();
-        font-size: 48px;
-        line-height: 110px;
-        text-align: center;
-      }
-    }
-  }
-
-  .icon-circle {
-    margin-bottom: 5px;
-  }
-}
-
-.icon-menu-horizontal {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0 -30px 2rem -30px;
-  list-style: none;
-
-  li {
-    margin: 0 30px 1rem 30px;
-    font-size: 21px;
-    font-style: italic;
-    text-align: center;
-
-    .icon-circle {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
 }
 
 // Buttons
 
 .btn {
-  border: none;
   border-radius: 0.3rem;
   transition: background-color 0.2s ease-in-out;
 
@@ -237,63 +156,15 @@ p {
   }
 }
 
-.btn-primary {
-  background-color: $gray-dark;
-
-  &:hover,
-  &:focus {
-    background-color: darken($gray-dark, 10%);
-  }
-}
-
-.btn-default {
-  background-color: $gray-lighter;
-}
-
-.btn-white {
-  background-color: #fff;
-  color: $gray-dark;
-
-  &:hover,
-  &:focus {
-    background-color: lighten($gray-light, 5%);
-    color: $gray-darker;
-  }
-}
-
-// Forms
-
-label {
-  margin-bottom: 0.125rem;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.form-control-lg {
-  font-size: 1.125rem;
-}
-
-.btn-row {
-  margin-top: 1rem;
-
-  .btn:not(:first-child) {
-    margin-left: 1rem;
-  }
-}
-
 // Modals
 
-.modal-content {
-  border: none;
-}
-
 .modal-header {
-  border-bottom: none;
-  color: #fff;
+  align-items: center;
+  color: $white;
 
   .close {
     padding: 0;
-    color: $gray-lighter !important;
+    color: $gray-300;
     font-size: 2.375rem;
     text-shadow: none;
     opacity: 1;
@@ -302,17 +173,12 @@ label {
 }
 
 .modal-body {
-  background-color: #fff;
+  background-color: $white;
   box-shadow: 1px 1px 9px 0 rgba($black, 0.33);
 }
 
 .modal-content {
   padding: 1rem;
-
-  .align-middle {
-    margin-top: auto;
-    margin-bottom: auto;
-  }
 }
 
 // Alerts
@@ -320,20 +186,19 @@ label {
 .alert {
   position: relative;
   min-height: 66px;
-  border: none;
-  padding: 20px 15px 15px 60px;
-  color: $gray-dark;
+  padding: (20rem / 16) (15rem / 16) (15rem / 16) (60rem / 16);
+  color: $gray-800;
 
   &:before {
     content: '';
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: (15rem / 16);
+    left: (15rem / 16);
     display: block;
-    height: 36px;
-    width: 36px;
+    height: (36rem / 16);
+    width: (36rem / 16);
     @include icon-font();
-    font-size: 36px;
+    font-size: (36rem / 16);
   }
 
   &.alert-success {
@@ -377,19 +242,6 @@ label {
   }
 }
 
-// Utilities
-
-.v-center {
-  display: table;
-  height: 100%;
-  width: 100%;
-}
-
-.v-content {
-  display: table-cell;
-  vertical-align: middle;
-}
-
 // Accordion
 
 .accordion {
@@ -403,21 +255,25 @@ label {
     .card-header {
       position: relative;
       padding: 0;
-      background-color: $gray-dark;
+      background-color: $gray-800;
       border-bottom: none;
-      color: #fff;
-      font-size: 24px;
+      color: $white;
+      font-size: (24rem / 16);
       font-style: italic;
 
-      button {
+      .btn {
         width: 100%;
         padding: 0.75rem 3.5rem 1rem 1.25rem;
-        color: #fff;
+        color: $white;
         font-size: 2rem;
         font-style: italic;
         line-height: 1;
         text-align: left;
         transition: background-color 0.2s ease-in-out;
+
+        @include media-breakpoint-down(xs) {
+          font-size: 1.625rem;
+        }
 
         &:after {
           content: '\f126';
@@ -432,7 +288,7 @@ label {
 
         &:hover,
         &:focus {
-          background-color: $gray-darker;
+          background-color: $gray-900;
           text-decoration: none;
         }
 
@@ -462,35 +318,6 @@ label {
 
       > *:first-child {
         margin-top: 0;
-      }
-    }
-  }
-}
-
-// Reponsive
-
-@media (max-width: 575px) {
-  .jumbotron {
-    padding: 0;
-    border-left: none;
-
-    &.icon-page {
-      margin-left: 0;
-
-      &:before {
-        content: none;
-      }
-    }
-  }
-}
-
-@media (max-width: 479px) {
-  .accordion {
-    .card {
-      .card-header {
-        button {
-          font-size: 1.625rem;
-        }
       }
     }
   }

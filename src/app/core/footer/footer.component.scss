@@ -2,12 +2,12 @@
 
 // Footer
 
-#footer {
+.footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   min-height: 150px;
-  background-color: $gray;
+  background-color: $gray-600;
   color: #fff;
   font-size: 14px;
 
@@ -22,7 +22,7 @@
 }
 
 @media (max-width: 767px) {
-  #footer {
+  .footer {
     .footer-left,
     .footer-right {
       text-align: center;

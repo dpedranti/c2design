@@ -30,6 +30,7 @@
 // Icon Fonts
 @mixin icon-font() {
   display: inline-block;
+  // stylelint-disable-next-line font-family-no-missing-generic-family-keyword
   font-family: 'Ionicons';
   speak: none;
   font-style: normal;
@@ -53,8 +54,7 @@ $retina-suffix: '2x';
 
     @media only screen and (-moz-min-device-pixel-ratio: 1.5),
       only screen and (-o-min-device-pixel-ratio: 3/2),
-      only screen and (-webkit-min-device-pixel-ratio: 1.5),
-      only screen and (min-device-pixel-ratio: 1.5) {
+      only screen and (-webkit-min-device-pixel-ratio: 1.5) {
       background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$bitmap-extension});
     }
   }

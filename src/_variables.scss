@@ -4,83 +4,108 @@
 
 // Colors
 
-$white: #fff !default;
-$black: #000 !default;
-$blue: #007eb7 !default;
-$red: #cd2026 !default;
-$orange: #da4c29 !default;
-$yellow: #f9c642 !default;
-$green: #67ad44 !default;
-$teal: #089c94 !default;
+$white: #fff;
+$black: #000;
+$blue: #007eb7;
+$red: #cd2026;
+$orange: #da4c29;
+$yellow: #f9c642;
+$green: #67ad44;
+$teal: #089c94;
 
-$gray-darker: #212121 !default;
-$gray-dark: #323a45 !default;
-$gray: #5b616b !default;
-$gray-light: #aeb0b5 !default;
-$gray-lighter: #d6d7d9 !default;
-$gray-lightest: #f1f1f1 !default;
-$gray-warm-dark: #494440 !default;
+// Bootstrap Color Overrides
 
-$gray-800: $gray-darker !default;
+$gray-lightest: #f1f1f1;
+$gray-warm-dark: #494440;
+
+$gray-100: #f1f1f1;
+$gray-300: #d6d7d9;
+$gray-500: #aeb0b5;
+$gray-600: #5b616b;
+$gray-800: #323a45;
+$gray-900: #212121;
+
+$dark: $gray-900;
+
+// Add color to the default theme
+
+$theme-colors: (
+  'white': $white,
+  'gray-lighter': $gray-300,
+  'gray-dark': $gray-800,
+  'red': $red
+);
 
 // Options
 
-$enable-rounded: false !default;
+$enable-rounded: false;
 
 // Spacing
 
-$spacer: 1rem !default;
+$spacer: 1rem;
+
+// Paragraphs
+
+$paragraph-margin-bottom: 2rem;
 
 // Components
 
-$box-shadow: 0 0.5rem 0.75rem rgba($black, 0.15) !default;
+$box-shadow: 0 0.5rem 0.75rem rgba($black, 0.15);
 
-// Fonts
+// Typography
 
-$font-family-sans-serif: 'Lato', Roboto, Arial, sans-serif !default;
+$font-family-sans-serif: 'Lato', Roboto, Arial, sans-serif;
 
-$h1-font-size: 3rem !default;
-$h2-font-size: 3.5rem !default;
-$h3-font-size: 2.5rem !default;
+$h1-font-size: 3rem;
+$h2-font-size: 3.5rem;
+$h3-font-size: 2.5rem;
 
-$headings-margin-bottom: $spacer !default;
-$headings-font-weight: 400 !default;
+$headings-margin-bottom: 0.875rem;
+$headings-font-weight: 400;
+
+$hr-border-color: rgba($black, 0.15);
+$hr-margin-y: 1.125rem;
 
 // Buttons
 
-$btn-box-shadow: 1px 1px 7px 0 rgba($black, 0.23) !default;
+$btn-border-width: 0;
+$btn-box-shadow: 1px 1px 7px 0 rgba($black, 0.23);
 
 // Forms
 
-$input-border-color: $gray-light !default;
-
-$form-group-margin-bottom: 1.5rem !default;
+$label-margin-bottom: 0.125rem;
+$input-font-size-lg: 1.125rem;
+$input-border-color: $gray-500;
+$form-group-margin-bottom: 1.5rem;
 
 // Navbar
 
-$navbar-padding-y: 1rem !default;
+$navbar-padding-y: 1rem;
 
-$navbar-dark-toggler-border-color: rgba($white, 0.2) !default;
+$navbar-dark-toggler-border-color: rgba($white, 0.2);
 
 // Navs
 
-$nav-link-padding-x: 1.5em !default;
+$nav-link-padding-x: 1.5em;
 
 // Jumbotron
 
-$jumbotron-padding: 0 !default;
-$jumbotron-bg: transparent !default;
+$jumbotron-padding: 0;
+$jumbotron-bg: transparent;
 
 // Modals
 
-$modal-inner-padding: 0 !default;
-$modal-content-bg: transparent !default;
-$modal-backdrop-opacity: 0.8 !default;
-$modal-header-padding: 1rem 0 !default;
+$modal-inner-padding: 0;
+$modal-content-bg: transparent;
+$modal-content-border-width: 0;
+$modal-backdrop-opacity: 0.8;
+$modal-header-border-width: 0;
+$modal-header-padding: 1rem 0;
 
 // Alerts
 
-$alert-margin-bottom: 2rem !default;
+$alert-margin-bottom: 2rem;
+$alert-border-width: 0;
 
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';

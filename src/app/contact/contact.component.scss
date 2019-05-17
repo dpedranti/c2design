@@ -1,18 +1,12 @@
 @import 'variables';
 @import '../../assets/scss/mixins';
 
-//
-// Contact Page
-// --------------------------------------------------
-
-#contact {
-  position: relative;
+.contact {
   z-index: 0;
   background: transparent
     url('../../assets/images/fea-c2design-studio-contact.jpg') no-repeat left
     center;
   background-size: cover;
-  color: #fff;
 
   &:before {
     content: '';
@@ -20,16 +14,11 @@
     z-index: -1;
     height: 100%;
     width: 100%;
-    background-color: rgba($gray-dark, 0.5);
+    background-color: rgba($gray-800, 0.5);
   }
 
-  > .container > .row {
+  .row {
     min-height: (300rem / 16);
-
-    > div {
-      display: flex;
-      align-items: center;
-    }
   }
 
   .jumbotron.icon-page:before {
@@ -37,19 +26,13 @@
   }
 }
 
-#our-designers {
+.our-designers {
   background-color: $gray-warm-dark;
-  color: #fff;
   font-size: 1.5rem;
   font-weight: 300;
-  text-align: center;
-
-  > .container {
-    padding: 5rem (30rem / 16);
-  }
 }
 
-#contact-info {
+.contact-info {
   .contact-info {
     margin-bottom: 2.125rem;
 
@@ -60,15 +43,50 @@
 
   .social-media-links {
     margin-bottom: 1.125rem;
+  }
+}
 
-    .icon-circle-solid {
-      background-color: $gray-warm-dark;
-      color: #fff;
+.icon-ul {
+  margin-left: -2px;
+  padding-left: 0;
+  list-style: none;
 
-      &:hover,
-      &:focus {
-        background-color: lighten($gray-warm-dark, 30%);
-      }
+  li {
+    &:not(:first-child) {
+      margin-top: 0.75rem;
     }
   }
+
+  &.icon-ul-inline {
+    li {
+      margin-top: 0;
+
+      &:not(:first-child) {
+        margin-left: 1rem;
+      }
+
+      display: inline-block;
+    }
+  }
+}
+
+.icon-circle-solid {
+  display: block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: $gray-warm-dark;
+  color: $white;
+  font-size: 34px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($gray-warm-dark, 30%);
+  }
+}
+
+.text-lg {
+  font-size: 1.25rem;
 }

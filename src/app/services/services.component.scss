@@ -1,18 +1,12 @@
 @import 'variables';
 @import '../../assets/scss/mixins';
 
-//
-// Services Page
-// --------------------------------------------------
-
-#services {
-  position: relative;
+.services {
   z-index: 0;
   background: transparent
     url('../../assets/images/fea-c2design-studio-services.jpg') no-repeat left
     center;
   background-size: cover;
-  color: #fff;
 
   &:before {
     content: '';
@@ -20,29 +14,22 @@
     z-index: -1;
     height: 100%;
     width: 100%;
-    background-color: rgba($gray-dark, 0.45);
+    background-color: rgba($gray-800, 0.45);
   }
 
-  > .container > .row {
-    min-height: 300px;
-
-    > div {
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  .jumbotron.icon-page:before {
-    background-position: 0 -110px;
+  .row {
+    min-height: (300rem / 16);
   }
 }
 
-#interactive-digital-design {
+.jumbotron.icon-page:before {
+  background-position: 0 (-110rem / 16);
+}
+
+.interactive-digital-design {
   background-color: $orange;
-  color: #fff;
   font-size: 1.5rem;
   font-weight: 300;
-  text-align: center;
 
   a {
     color: #fff;
@@ -50,12 +37,12 @@
 
     &:hover,
     &:focus {
-      color: $gray-lighter;
+      color: $gray-300;
     }
   }
 }
 
-#service-offerings {
+.service-offerings {
   h3 {
     margin-top: 1.75rem;
 
@@ -66,11 +53,6 @@
 
   hr {
     margin: 1.75rem 0 0.5rem 0;
-  }
-
-  .icon-link {
-    color: $orange;
-    cursor: pointer;
   }
 
   .icon-circle {
@@ -89,7 +71,7 @@
         true,
         '../../assets/images'
       );
-      background-size: auto 60px;
+      background-size: auto (60rem / 16);
     }
 
     &.icon-online-marketing:before {
@@ -98,7 +80,7 @@
         true,
         '../../assets/images'
       );
-      background-size: 60px auto;
+      background-size: (60rem / 16) auto;
     }
 
     &.icon-digital-design:before {
@@ -107,7 +89,49 @@
         true,
         '../../assets/images'
       );
-      background-size: 70px auto;
+      background-size: (70rem / 16) auto;
+    }
+  }
+}
+
+.icon-menu {
+  margin: 0 (-30rem / 16) 2rem (-30rem / 16);
+
+  li {
+    margin: 0 (30rem / 16) 1rem (30rem / 16);
+    font-size: (21rem / 16);
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+.icon-circle {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: (5rem / 16);
+}
+
+.icon-link {
+  color: $gray-800;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    .icon-circle {
+      background-color: $gray-300;
+      transition: background-color 0.2s linear;
+
+      &:before {
+        content: '\f35d' !important;
+        background-image: none !important;
+        @include icon-font();
+        color: $orange;
+        font-size: (48rem / 16);
+        line-height: (110rem / 16);
+        text-align: center;
+      }
     }
   }
 }

@@ -4,7 +4,7 @@
 // Navbar
 
 .navbar-dark {
-  #logo-c2design-studio {
+  .logo-c2design-studio {
     width: 224px;
     height: 40px;
     padding: 0;
@@ -69,7 +69,7 @@
 
         .nav-item {
           &:not(:first-child) {
-            border-top: 1px solid $gray-dark;
+            border-top: 1px solid $gray-800;
           }
 
           .nav-link {

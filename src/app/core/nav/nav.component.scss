@@ -16,10 +16,9 @@
   }
 }
 
-@media (min-width: 768px) {
+@include media-breakpoint-up(md) {
   .navbar-dark {
     border-top: 6px solid theme-color('primary');
-
     padding: 0 1rem;
 
     .navbar-nav {
@@ -61,7 +60,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@include media-breakpoint-down(sm) {
   .navbar-dark {
     .navbar-collapse {
       .navbar-nav {
@@ -93,7 +92,7 @@
   }
 }
 
-@media (max-width: 575px) {
+@include media-breakpoint-down(xs) {
   .navbar-toggleable-sm > .container {
     width: 100%;
   }

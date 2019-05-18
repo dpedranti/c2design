@@ -21,7 +21,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@include media-breakpoint-down(sm) {
   .footer {
     .footer-left,
     .footer-right {

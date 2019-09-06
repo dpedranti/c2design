@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
@@ -6,7 +6,7 @@ import { Title, Meta } from '@angular/platform-browser';
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss']
 })
-export class BlogComponent implements OnInit {
+export class BlogComponent {
   constructor(private title: Title, private meta: Meta) {
     this.title.setTitle(
       'Web / Mobile Design and Marketing Insights - C2 Design Studio'
@@ -19,6 +19,4 @@ export class BlogComponent implements OnInit {
     });
     /* tslint:enable:max-line-length */
   }
-
-  ngOnInit() {}
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
@@ -6,7 +6,7 @@ import { Title, Meta } from '@angular/platform-browser';
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss']
 })
-export class ServicesComponent implements OnInit {
+export class ServicesComponent {
   openAccordions = [
     'web-mobile',
     'online-marketing',
@@ -26,6 +26,4 @@ export class ServicesComponent implements OnInit {
     });
     /* tslint:enable:max-line-length */
   }
-
-  ngOnInit() {}
 }

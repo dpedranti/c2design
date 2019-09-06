@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { uniqueId } from 'lodash';
@@ -9,7 +9,7 @@ import { WEB, MARKETING, DIGITAL_SIGNAGE } from './portfolio-items';
   templateUrl: './our-work.component.html',
   styleUrls: ['./our-work.component.scss']
 })
-export class OurWorkComponent implements OnInit {
+export class OurWorkComponent {
   modalImage: string;
   modalVideo: string;
   modalTitle: string;
@@ -43,6 +43,4 @@ export class OurWorkComponent implements OnInit {
     this.modalTitle = portfolioItem.title;
     this.modalIndex = uniqueId();
   }
-
-  ngOnInit() {}
 }

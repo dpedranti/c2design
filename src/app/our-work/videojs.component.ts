@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, Input } from '@angular/core';
+import { Component, AfterViewInit, Input } from '@angular/core';
 
 import videojs from 'video.js';
 
@@ -7,7 +7,7 @@ import videojs from 'video.js';
   template: `
     <video
       *ngIf="url"
-      id="video_{{idx}}"
+      id="video_{{ idx }}"
       class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9"
       controls
       autoplay
@@ -19,7 +19,7 @@ import videojs from 'video.js';
     </video>
   `
 })
-export class VideoJSComponent implements OnInit, AfterViewInit {
+export class VideoJSComponent implements AfterViewInit {
   @Input() idx: string;
   @Input() url: any;
   @Input() type = 'video/mp4';
@@ -30,8 +30,6 @@ export class VideoJSComponent implements OnInit, AfterViewInit {
     this.url = false;
     this.player = false;
   }
-
-  ngOnInit() {}
 
   ngAfterViewInit() {
     const el = 'video_' + this.idx;

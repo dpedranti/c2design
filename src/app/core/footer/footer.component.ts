@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import * as moment from 'moment';
 
 @Component({
@@ -6,10 +6,6 @@ import * as moment from 'moment';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
   currentYear = moment().year();
-
-  constructor() { }
-
-  ngOnInit() { }
 }

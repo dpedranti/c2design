@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
@@ -6,7 +6,7 @@ import { Title, Meta } from '@angular/platform-browser';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
   constructor(private title: Title, private meta: Meta) {
     this.title.setTitle(
       'Orange County Web Development and Design - C2 Design Studio'
@@ -19,6 +19,4 @@ export class ContactComponent implements OnInit {
     });
     /* tslint:enable:max-line-length */
   }
-
-  ngOnInit() {}
 }

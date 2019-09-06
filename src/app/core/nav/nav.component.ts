@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 class MenuItem {
-  constructor(public caption: string, public link: any[]) { }
+  constructor(public caption: string, public link: any[]) {}
 }
 
 @Component({
@@ -21,9 +21,7 @@ export class NavComponent implements OnInit {
       { caption: 'Our Work', link: ['/our-work'] },
       { caption: 'Services', link: ['/services'] },
       { caption: 'Blog', link: ['/blog'] },
-      { caption: 'Contact', link: ['/contact'] },
+      { caption: 'Contact', link: ['/contact'] }
     ];
   }
-
-  constructor() { }
 }

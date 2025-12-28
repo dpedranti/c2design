@@ -1,6 +1,6 @@
 # C2design
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
+This project uses [Angular CLI](https://github.com/angular/angular-cli) 7.
 
 ## Development server
 
